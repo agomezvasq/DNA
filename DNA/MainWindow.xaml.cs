@@ -25,6 +25,9 @@ namespace DNA
             InitializeComponent();
         }
 
+        int min_r = -1;
+        int max_r = -1;
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
             
@@ -33,6 +36,32 @@ namespace DNA
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             textBox1.Text = encode(textBox.Text);
+            updateR();
+        }
+
+        public void updateR()
+        {
+            string st = textBox.Text;
+            if (st.Length == 0)
+            {
+                label.Content = "Text: 0 <= R <= 0";
+                return;
+            }
+                
+            if (min_r==-1 || max_r==-1)
+            {
+                min_r = st[0];
+                max_r = st[0];
+            }
+            for (int i=0; i<st.Length; i++)
+            {
+                char c = st[i];
+                if (c < min_r)
+                    min_r = c;
+                if (c > max_r)
+                    max_r = c;
+            }
+            label.Content = "Text: "+ min_r + " <= R <= " + max_r;
         }
 
         public static string encode(string s)

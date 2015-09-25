@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="446.392" Width="793.432">
     <Grid>
-        <Label x:Name="label" Content="Text" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="372" HorizontalContentAlignment="Center"/>
+        <Label x:Name="label" Content="Text: 0 &lt;= R &lt;= 0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="372" HorizontalContentAlignment="Center"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="10,36,0,10" TextWrapping="Wrap" Width="372" FontFamily="Segoe UI Light" TextChanged="textBox_TextChanged" BorderThickness="0" FontSize="16"/>
         <Label x:Name="label1" Content="." HorizontalAlignment="Left" Margin="644,197,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light"/>
         <Label x:Name="label_Copy" HorizontalAlignment="Left" Margin="401,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="180" HorizontalContentAlignment="Center" Content="DNA" Foreground="#FFAEAEAE"/>

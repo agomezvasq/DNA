@@ -12,13 +12,5 @@ namespace DNAC
         {
             Console.ReadLine();
         }
-
-        static int [] baseN(int s, int e)
-        {
-            if (e < s)
-                return null;
-            int[] b = new int[e - s];
-
-        }
     }
 }
