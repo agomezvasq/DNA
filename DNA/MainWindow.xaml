@@ -10,9 +10,11 @@
         <Label x:Name="label" Content="Text: 0 &lt;= R &lt;= 0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="372" HorizontalContentAlignment="Center"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="10,36,0,10" TextWrapping="Wrap" Width="372" FontFamily="Segoe UI Light" TextChanged="textBox_TextChanged" BorderThickness="0" FontSize="16"/>
         <Label x:Name="label1" Content="." HorizontalAlignment="Left" Margin="644,197,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light"/>
-        <Label x:Name="label_Copy" HorizontalAlignment="Left" Margin="401,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="180" HorizontalContentAlignment="Center" Content="DNA" Foreground="#FFAEAEAE"/>
+        <Label x:Name="label_Copy" HorizontalAlignment="Left" Margin="401,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="86" HorizontalContentAlignment="Center" Content="DNA" Foreground="#FFAEAEAE"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="387,36,0,10" TextWrapping="Wrap" Width="388" Foreground="Red" BorderThickness="0" IsReadOnly="True" FontSize="18.667" FontFamily="Segoe UI Semibold"/>
-        <Label x:Name="label_Copy3" HorizontalAlignment="Left" Margin="586,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="151" HorizontalContentAlignment="Center" Content="mRNA/RNA" Foreground="Black"/>
+        <Label x:Name="label_Copy3" HorizontalAlignment="Left" Margin="492,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="112" HorizontalContentAlignment="Center" Content="mRNA/RNA" Foreground="Black"/>
+        <Label x:Name="label_Copy1" Content="%GC=0.0" HorizontalAlignment="Left" Margin="609,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="89" HorizontalContentAlignment="Center"/>
+        <Label x:Name="label_Copy2" Content="AT/CG=0.0" HorizontalAlignment="Left" Margin="703,10,0,0" VerticalAlignment="Top" FontFamily="Segoe UI Light" Width="72" HorizontalContentAlignment="Center"/>
 
     </Grid>
 </Window>

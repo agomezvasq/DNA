@@ -35,77 +35,20 @@ namespace DNA
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            textBox1.Text = encode(textBox.Text);
-            updateR();
-        }
-
-        public void updateR()
-        {
-            string st = textBox.Text;
-            if (st.Length == 0)
+            if (textBox.Text.Length == 0)
             {
+                textBox1.Clear();
                 label.Content = "Text: 0 <= R <= 0 - 0 <= R4 <= 0";
+                label_Copy1.Content = "%GC=0";
+                label_Copy2.Content = "AT/GC=0.0";
                 return;
-            }
-            if (min_r==-1 || max_r==-1)
-            {
-                min_r = st[0];
-                max_r = st[0];
-            }
-            for (int i=0; i<st.Length; i++)
-            {
-                char c = st[i];
-                if (c < min_r)
-                    min_r = c;
-                if (c > max_r)
-                    max_r = c;
-            }
-            label.Content = "Text: "+ min_r + " <= R <= " + max_r + " - " + quat(min_r) + " <= R4 <= " + quat(max_r);
-        }
-
-        public static int quat(int k)
-        {
-            int qu = 0;
-            int ran = 0;
-            while (k>0)
-            {
-                qu += (k % 4) * (int) Math.Pow(10, ran);
-                k /= 4;
-                ran++;
-            }
-            return qu;
-        }
-
-        public static string encode(string s)
-        {
-            string mfst = "";
-            for (int i = 0; i < s.Length; i++)
-            {
-                int r = s[i];
-                string nstr = "";
-                while (r > 0)
-                {
-                    nstr = ACGU(r % 4) + nstr;
-                    r /= 4;
-                }
-                if (mfst.Equals(""))
-                    mfst = nstr;
-                else
-                    mfst = mfst + nstr;
-            }
-            return mfst;
-        }
-
-        public static char ACGU(int a)
-        {
-            switch (a)
-            {
-                case 0: return 'A';
-                case 1: return 'C';
-                case 2: return 'G';
-                case 3: return 'U';
-            }
-            return (char)0;
+            } 
+            Sequence seq = new Sequence(textBox.Text);
+            textBox1.Text = seq.getSeq();
+            label.Content = "Text: " + seq.getMINRan() + " <= R <= " + seq.getMAXRan() 
+                + " - " + Sequence.quat(seq.getMINRan()) + " <= R4 <= " + Sequence.quat(seq.getMAXRan());
+            label_Copy1.Content = "%GC=" + seq.getGC_C();
+            label_Copy2.Content = "AT/GC=" + seq.getATGC_R();
         }
 
   
