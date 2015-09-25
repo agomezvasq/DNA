@@ -44,10 +44,9 @@ namespace DNA
             string st = textBox.Text;
             if (st.Length == 0)
             {
-                label.Content = "Text: 0 <= R <= 0";
+                label.Content = "Text: 0 <= R <= 0 - 0 <= R4 <= 0";
                 return;
             }
-                
             if (min_r==-1 || max_r==-1)
             {
                 min_r = st[0];
@@ -61,7 +60,20 @@ namespace DNA
                 if (c > max_r)
                     max_r = c;
             }
-            label.Content = "Text: "+ min_r + " <= R <= " + max_r;
+            label.Content = "Text: "+ min_r + " <= R <= " + max_r + " - " + quat(min_r) + " <= R4 <= " + quat(max_r);
+        }
+
+        public static int quat(int k)
+        {
+            int qu = 0;
+            int ran = 0;
+            while (k>0)
+            {
+                qu += (k % 4) * (int) Math.Pow(10, ran);
+                k /= 4;
+                ran++;
+            }
+            return qu;
         }
 
         public static string encode(string s)
