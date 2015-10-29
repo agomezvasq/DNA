@@ -235,7 +235,6 @@ E:\Documents\Visual Studio 2015\Projects\dnaK\dnaK\bin\ARM\Debug\System.Xml.Read
 E:\Documents\Visual Studio 2015\Projects\dnaK\dnaK\bin\ARM\Debug\System.Xml.XDocument.dll
 E:\Documents\Visual Studio 2015\Projects\dnaK\dnaK\bin\ARM\Debug\System.Xml.XmlDocument.dll
 E:\Documents\Visual Studio 2015\Projects\dnaK\dnaK\bin\ARM\Debug\System.Xml.XmlSerializer.dll
-E:\Documents\Visual Studio 2015\Projects\dnaK\dnaK\obj\ARM\Debug\dnaK.csprojResolveAssemblyReference.cache
 E:\Documents\Visual Studio 2015\Projects\dnaK\dnaK\obj\ARM\Debug\App.g.i.cs
 E:\Documents\Visual Studio 2015\Projects\dnaK\dnaK\obj\ARM\Debug\App.g.cs
 E:\Documents\Visual Studio 2015\Projects\dnaK\dnaK\obj\ARM\Debug\MainPage.g.i.cs
