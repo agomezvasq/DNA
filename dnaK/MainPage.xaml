@@ -7,7 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FFFF7400">
+        <ScrollViewer Margin="20,0,20,20" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" Height="219" VerticalAlignment="Bottom">
+            <StackPanel HorizontalAlignment="Left" Height="219" VerticalAlignment="Top" Width="1400" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="#BFFF8B50"/>
+        </ScrollViewer>
 
     </Grid>
 </Page>
