@@ -1,6 +1,0 @@
-E:\Documents\Visual Studio 2015\Projects\DNA\DNAC\bin\Debug\DNAC.exe.config
-E:\Documents\Visual Studio 2015\Projects\DNA\DNAC\bin\Debug\DNAC.exe
-E:\Documents\Visual Studio 2015\Projects\DNA\DNAC\bin\Debug\DNAC.pdb
-E:\Documents\Visual Studio 2015\Projects\DNA\DNAC\obj\Debug\DNAC.csprojResolveAssemblyReference.cache
-E:\Documents\Visual Studio 2015\Projects\DNA\DNAC\obj\Debug\DNAC.exe
-E:\Documents\Visual Studio 2015\Projects\DNA\DNAC\obj\Debug\DNAC.pdb
