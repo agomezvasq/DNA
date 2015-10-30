@@ -468,3 +468,10 @@ e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\Core\Assets\Bas
 e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\Core\Assets\Base\Uu.png
 e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Base\Tu.png
 e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\Core\Assets\Base\Tu.png
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\StringItem.xbf
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\DNAK.png
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\StringItem.g.i.cs
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\StringItem.g.cs
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\StringItem.xaml
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\StringItem.xbf
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\Core\Assets\DNAK.png

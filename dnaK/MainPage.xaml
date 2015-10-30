@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="White">
-        <Pivot Title="">
+        <Pivot Title="" SelectedIndex="1">
             <PivotItem Header="Input" Margin="0,0,0,-0.333">
                 <Grid>
                     <AutoSuggestBox VerticalAlignment="Top" PlaceholderText="Write your text here" QueryIcon="Forward"/>
@@ -31,12 +31,15 @@
                     <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="1259,478,0,0" TextWrapping="Wrap" Text="2.314" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
                     <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="1259,620,0,0" TextWrapping="Wrap" Text="14 KB" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
                     <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="1259,652,0,0" TextWrapping="Wrap" Text="154 BP" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
-                    <Canvas HorizontalAlignment="Left" Height="601" Margin="0,102,0,0" VerticalAlignment="Top" Width="870">
-                        <Border BorderBrush="Black" BorderThickness="1" Height="601" Width="870"/>
-                    </Canvas>
-                    <Canvas HorizontalAlignment="Left" Height="601" Margin="870,102,0,0" VerticalAlignment="Top" Width="251" Background="#7F464646">
-                        <Border BorderBrush="Black" BorderThickness="1" Height="601" Width="251"/>
-                    </Canvas>
+                    <Canvas HorizontalAlignment="Left" Height="601" Margin="0,102,0,0" VerticalAlignment="Top" Width="870"/>
+                    <StackPanel HorizontalAlignment="Left" Height="601" Margin="870,102,0,0" VerticalAlignment="Top" Width="251" Background="#7F464646" BorderBrush="Black" BorderThickness="1">
+                        <local:Str Padding="0" Margin="0,0,0,4"/>
+                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
+                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
+                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
+                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
+                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
+                    </StackPanel>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Match" Margin="0,0,0,-0.333">
@@ -62,7 +65,7 @@
                             <local:BP Base="2" Height="130"/>
                         </StackPanel>
                     </ScrollViewer>
-                    <StackPanel HorizontalAlignment="Left" Height="30" Margin="0,855,0,0" VerticalAlignment="Top" Width="1440" Background="#7FF1F1F1"/>
+                    <StackPanel Background="#7FEAEAEA" Height="25" VerticalAlignment="Bottom"/>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Load" Margin="0,0,0,-0.333">

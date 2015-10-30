@@ -54,6 +54,9 @@
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Base\Uu.png">
       <PackagePath>Assets\Base\Uu.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\DNAK.png">
+      <PackagePath>Assets\DNAK.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
