@@ -1,0 +1,38 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:dnaK"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="dnaK.MainPage"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Pivot Title="" SelectedIndex="-11">
+            <PivotItem Header="Input">
+                <Grid>
+                    <AutoSuggestBox Margin="10,187,10,0" VerticalAlignment="Top" PlaceholderText="Write your text here" QueryIcon="Forward"/>
+                    <ScrollViewer Margin="10,0,10,10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4">
+                        <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            <local:BP Height="130"/>
+                            <local:BP Base="1" Height="130"/>
+                            <local:BP Base="2" Height="130"/>
+                            <local:BP Base="3" Height="130"/>
+                            <local:BP Height="130"/>
+                            <local:BP Base="2" Height="130"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Swarm">
+                <Grid/>
+            </PivotItem>
+            <PivotItem Header="Match">
+                <Grid/>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>
+
