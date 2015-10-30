@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="dnaK.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:dnaK"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="#FFFA6802">
+        <ScrollViewer Margin="20,0,20,20" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="207" VerticalAlignment="Bottom" Background="#7FBB4E00">
+            <StackPanel HorizontalAlignment="Left" Height="190" VerticalAlignment="Center" Width="560" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                <Rectangle Width="17"/>
+                <local:BP/>
+                <local:BP Base="1"/>
+                <local:BP Base="2"/>
+                <local:BP Base="3"/>
+                <local:BP/>
+                <local:BP Base="2"/>
+                <Rectangle Width="17"/>
+            </StackPanel>
+        </ScrollViewer>
+
+    </Grid>
+</Page>
+

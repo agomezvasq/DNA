@@ -8,8 +8,17 @@
     mc:Ignorable="d">
 
     <Grid Background="#FFFA6802">
-        <ScrollViewer Margin="20,0,20,20" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" Height="207" VerticalAlignment="Bottom">
-            <StackPanel HorizontalAlignment="Left" Height="207" VerticalAlignment="Center" Width="1400" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Background="#7FFDF2EA"/>
+        <ScrollViewer Margin="20,0,20,20" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="207" VerticalAlignment="Bottom" Background="#7FBB4E00">
+            <StackPanel HorizontalAlignment="Left" Height="190" VerticalAlignment="Center" Width="560" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                <Rectangle Width="17"/>
+                <local:BP/>
+                <local:BP Base="1"/>
+                <local:BP Base="2"/>
+                <local:BP Base="3"/>
+                <local:BP/>
+                <local:BP Base="2"/>
+                <Rectangle Width="17"/>
+            </StackPanel>
         </ScrollViewer>
 
     </Grid>
