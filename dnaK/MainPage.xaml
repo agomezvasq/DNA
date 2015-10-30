@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="White">
-        <Pivot Title="" SelectedIndex="2">
+        <Pivot Title="">
             <PivotItem Header="Input" Margin="0,0,0,-0.333">
                 <Grid>
                     <AutoSuggestBox VerticalAlignment="Top" PlaceholderText="Write your text here" QueryIcon="Forward"/>
@@ -31,14 +31,17 @@
                     <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="1259,478,0,0" TextWrapping="Wrap" Text="2.314" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
                     <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="1259,620,0,0" TextWrapping="Wrap" Text="14 KB" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
                     <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="1259,652,0,0" TextWrapping="Wrap" Text="154 BP" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
-                    <Canvas HorizontalAlignment="Left" Height="601" Margin="0,102,0,0" VerticalAlignment="Top" Width="1141"/>
+                    <Canvas HorizontalAlignment="Left" Height="601" Margin="0,102,0,0" VerticalAlignment="Top" Width="870">
+                        <Border BorderBrush="Black" BorderThickness="1" Height="601" Width="870"/>
+                    </Canvas>
+                    <Canvas HorizontalAlignment="Left" Height="601" Margin="870,102,0,0" VerticalAlignment="Top" Width="251" Background="#7F464646">
+                        <Border BorderBrush="Black" BorderThickness="1" Height="601" Width="251"/>
+                    </Canvas>
                 </Grid>
             </PivotItem>
-            <PivotItem Header="Swarm">
-                <Grid/>
-            </PivotItem>
-            <PivotItem Header="Match">
+            <PivotItem Header="Match" Margin="0,0,0,-0.333">
                 <Grid>
+                    <Canvas Height="130" Margin="0,130,0,0" VerticalAlignment="Top" Background="#7FE2E2E2"/>
                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FFBCEB4" Margin="0,0,0,755">
                         <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                             <local:BP Height="130"/>
@@ -59,6 +62,92 @@
                             <local:BP Base="2" Height="130"/>
                         </StackPanel>
                     </ScrollViewer>
+                    <StackPanel HorizontalAlignment="Left" Height="30" Margin="0,855,0,0" VerticalAlignment="Top" Width="1440" Background="#7FF1F1F1"/>
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Load" Margin="0,0,0,-0.333">
+                <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Margin="0,0,0,755">
+                        <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            <local:BP Height="130"/>
+                            <local:BP Base="1" Height="130"/>
+                            <local:BP Base="2" Height="130"/>
+                            <local:BP Base="3" Height="130"/>
+                            <local:BP Height="130"/>
+                            <local:BP Base="2" Height="130"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="0,442,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="1440" Height="443" IsReadOnly="True" Background="#FFE4E4E4" BorderBrush="{x:Null}"/>
+                    <AppBarButton x:Name="appBarButton1" HorizontalAlignment="Left" Icon="Copy" Label="Copy" Margin="1221,130,0,0" VerticalAlignment="Top">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Width="1440">
+                            <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                <local:BP Height="130"/>
+                                <local:BP Base="1" Height="130"/>
+                                <local:BP Base="2" Height="130"/>
+                                <local:BP Base="3" Height="130"/>
+                                <local:BP Height="130"/>
+                                <local:BP Base="2" Height="130"/>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </AppBarButton>
+                    <AppBarButton x:Name="appBarButton1_Copy" HorizontalAlignment="Left" Icon="Import" Label="Add to project" Margin="1289,130,0,0" VerticalAlignment="Top">
+                        <AppBarButton x:Name="appBarButton1_Copy2" HorizontalAlignment="Left" Icon="Accept" Label="appbarbutton" VerticalAlignment="Top" Width="68">
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Width="1440">
+                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="1" Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                    <local:BP Base="3" Height="130"/>
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </AppBarButton>
+                    </AppBarButton>
+                    <AppBarButton x:Name="appBarButton1_Copy1" HorizontalAlignment="Left" Label="File" Margin="1153,130,0,0" VerticalAlignment="Top" Icon="OpenFile">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Width="1440">
+                            <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                <local:BP Height="130"/>
+                                <local:BP Base="1" Height="130"/>
+                                <local:BP Base="2" Height="130"/>
+                                <local:BP Base="3" Height="130"/>
+                                <local:BP Height="130"/>
+                                <local:BP Base="2" Height="130"/>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </AppBarButton>
+                    <AppBarButton x:Name="appBarButton1_Copy3" HorizontalAlignment="Left" Icon="Clear" Label="Clear" Margin="1362,130,0,0" VerticalAlignment="Top">
+                        <AppBarButton x:Name="appBarButton1_Copy4" HorizontalAlignment="Left" Icon="Accept" Label="appbarbutton" VerticalAlignment="Top" Width="68">
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Width="1440">
+                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="1" Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                    <local:BP Base="3" Height="130"/>
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </AppBarButton>
+                    </AppBarButton>
+                    <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="1130,276,0,0" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="300" TextAlignment="Right"/>
+                    <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Margin="1130,340,0,0" TextWrapping="Wrap" Text="25.128" VerticalAlignment="Top" FontSize="26.667" Width="300" TextAlignment="Right" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Left" Margin="954,276,0,0" TextWrapping="Wrap" Text="Base pairs" VerticalAlignment="Top" FontSize="48" Width="300" TextAlignment="Center"/>
+                    <TextBlock x:Name="textBlock_Copy8" HorizontalAlignment="Left" Margin="954,340,0,0" TextWrapping="Wrap" Text="1576" VerticalAlignment="Top" FontSize="26.667" Width="300" TextAlignment="Center" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="textBlock_Copy9" HorizontalAlignment="Left" Margin="649,276,0,0" TextWrapping="Wrap" Text="Compression" VerticalAlignment="Top" FontSize="48" Width="300" TextAlignment="Center"/>
+                    <TextBlock x:Name="textBlock_Copy10" HorizontalAlignment="Left" Margin="649,340,0,0" TextWrapping="Wrap" Text="1576" VerticalAlignment="Top" FontSize="26.667" Width="300" TextAlignment="Center" FontFamily="Segoe UI Light"/>
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="About">
+                <Grid>
+                    <Image x:Name="image" HorizontalAlignment="Center" Height="130" Margin="643,298,643,0" VerticalAlignment="Top" Width="130" Source="Assets/DNAK.png"/>
+                    <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,439,0,0" TextWrapping="Wrap" Text="DNAK" VerticalAlignment="Top" FontSize="32" TextAlignment="Center" Width="1396"/>
+                    <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" Margin="10,482,0,0" TextWrapping="Wrap" Text="by Andrés Gómez" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" Width="1396" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" Margin="10,502,0,0" TextWrapping="Wrap" Text="agomezvasq@gmail.com" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" Width="1396" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" Margin="10,529,0,0" TextWrapping="Wrap" Text="Universidad EAFIT" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" Width="1396"/>
+                    <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" Margin="10,551,0,0" TextWrapping="Wrap" Text="id: 201420008010" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" Width="1396" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" Margin="10,571,0,0" TextWrapping="Wrap" Text="agomezv3@eafit.edu.co" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" Width="1396" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="textBlock1_Copy5" HorizontalAlignment="Left" Margin="10,598,0,0" TextWrapping="Wrap" Text="kodei. 2015" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" Width="1396" FontFamily="Segoe UI Light"/>
                 </Grid>
             </PivotItem>
         </Pivot>
