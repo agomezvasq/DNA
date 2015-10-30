@@ -8,8 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="White">
-        <ScrollViewer Margin="10,0,-493,10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="207" VerticalAlignment="Bottom" Background="#7FD4D4D4">
-            <StackPanel HorizontalAlignment="Left" Height="183" VerticalAlignment="Center" Width="560" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <ScrollViewer Margin="10,0,10,10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4">
+            <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Width="384" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                 <Rectangle Width="10"/>
                 <local:BP/>
                 <local:BP Base="1"/>
@@ -17,7 +17,7 @@
                 <local:BP Base="3"/>
                 <local:BP/>
                 <local:BP Base="2"/>
-                <Rectangle Width="17"/>
+                <Rectangle Width="10"/>
             </StackPanel>
         </ScrollViewer>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="10,187,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="340" Background="White"/>

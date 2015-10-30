@@ -5,14 +5,13 @@
     xmlns:local="using:dnaK"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    d:DesignHeight="300" Height="187" Width="75">
+    mc:Ignorable="d" Height="166.692" Width="60.692">
 
     <Grid>
-        <Rectangle x:Name="link" Fill="White" Margin="36,23,37,23" HorizontalAlignment="Center" Width="2"/>
-        <Image x:Name="bU" HorizontalAlignment="Left" Margin="10,0,0,10" Width="55" Stretch="UniformToFill" Height="55" VerticalAlignment="Bottom" Source="Assets/Base/Au.png"/>
-        <Image x:Name="bD" HorizontalAlignment="Left" Height="55" Margin="10,10,0,0" VerticalAlignment="Top" Width="55" Stretch="UniformToFill" Source="Assets/Base/Td.png"/>
-        <TextBlock x:Name="bDk" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" TextWrapping="Wrap" Text="T" VerticalAlignment="Top" Width="55" Foreground="White" FontFamily="Segoe WP Light" TextAlignment="Center" FontSize="24"/>
-        <TextBlock x:Name="bUk" HorizontalAlignment="Left" Margin="10,0,0,10" TextWrapping="Wrap" Text="A" Width="55" Foreground="White" FontFamily="Segoe WP Light" TextAlignment="Center" FontSize="24" Height="27" VerticalAlignment="Bottom"/>
+        <Rectangle x:Name="link" Fill="White" Margin="30,23,0,23" HorizontalAlignment="Left" Width="1"/>
+        <Image x:Name="bU" HorizontalAlignment="Left" Margin="10,0,0,10" Width="41" Stretch="UniformToFill" Height="41" VerticalAlignment="Bottom" Source="Assets/Base/Au.png"/>
+        <Image x:Name="bD" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" VerticalAlignment="Top" Width="41" Stretch="UniformToFill" Source="Assets/Base/Td.png"/>
+        <TextBlock x:Name="bDk" HorizontalAlignment="Left" Height="27" Margin="10,10,0,0" TextWrapping="Wrap" Text="T" VerticalAlignment="Top" Width="21" Foreground="White" FontFamily="Segoe WP Light" FontSize="24" TextAlignment="Center"/>
+        <TextBlock x:Name="bUk" HorizontalAlignment="Left" Margin="30,0,0,10" TextWrapping="Wrap" Text="A" Width="21" Foreground="White" FontFamily="Segoe WP Light" FontSize="24" Height="27" VerticalAlignment="Bottom" TextAlignment="Center"/>
     </Grid>
 </UserControl>
