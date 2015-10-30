@@ -9,11 +9,46 @@
     mc:Ignorable="d">
 
     <Grid Background="White">
-        <Pivot Title="" SelectedIndex="-11">
-            <PivotItem Header="Input">
+        <Pivot Title="" SelectedIndex="2">
+            <PivotItem Header="Input" Margin="10,0,10,10.667">
                 <Grid>
-                    <AutoSuggestBox Margin="10,187,10,0" VerticalAlignment="Top" PlaceholderText="Write your text here" QueryIcon="Forward"/>
-                    <ScrollViewer Margin="10,0,10,10" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4">
+                    <AutoSuggestBox VerticalAlignment="Top" PlaceholderText="Write your text here" QueryIcon="Forward"/>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4">
+                        <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            <local:BP Height="130"/>
+                            <local:BP Base="1" Height="130"/>
+                            <local:BP Base="2" Height="130"/>
+                            <local:BP Base="3" Height="130"/>
+                            <local:BP Height="130"/>
+                            <local:BP Base="2" Height="130"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="OpenFile" Label="Import" Margin="1284,32,0,0" VerticalAlignment="Top"/>
+                    <AppBarButton x:Name="appBarButton_Copy" HorizontalAlignment="Left" Icon="Admin" Label="Do" Margin="1352,32,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="1227,202,0,0" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="193" TextAlignment="Right"/>
+                    <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="1259,266,0,0" TextWrapping="Wrap" Text="25.128" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="1227,414,0,0" TextWrapping="Wrap" Text="AT/GC" VerticalAlignment="Top" FontSize="48" Width="193" TextAlignment="Right"/>
+                    <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="1259,478,0,0" TextWrapping="Wrap" Text="2.314" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="1259,620,0,0" TextWrapping="Wrap" Text="14 KB" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="1259,652,0,0" TextWrapping="Wrap" Text="154 BP" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Swarm">
+                <Grid/>
+            </PivotItem>
+            <PivotItem Header="Match">
+                <Grid>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FBCE0E8" Margin="0,0,0,755">
+                        <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            <local:BP Height="130"/>
+                            <local:BP Base="1" Height="130"/>
+                            <local:BP Base="2" Height="130"/>
+                            <local:BP Base="3" Height="130"/>
+                            <local:BP Height="130"/>
+                            <local:BP Base="2" Height="130"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Margin="121,0,931,625">
                         <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                             <local:BP Height="130"/>
                             <local:BP Base="1" Height="130"/>
@@ -24,12 +59,6 @@
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
-            </PivotItem>
-            <PivotItem Header="Swarm">
-                <Grid/>
-            </PivotItem>
-            <PivotItem Header="Match">
-                <Grid/>
             </PivotItem>
         </Pivot>
 
