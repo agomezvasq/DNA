@@ -10,7 +10,7 @@
 
     <Grid Background="White">
         <Pivot Title="" SelectedIndex="2">
-            <PivotItem Header="Input" Margin="10,0,10,10.667">
+            <PivotItem Header="Input" Margin="0,0,0,-0.333">
                 <Grid>
                     <AutoSuggestBox VerticalAlignment="Top" PlaceholderText="Write your text here" QueryIcon="Forward"/>
                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4">
@@ -31,6 +31,7 @@
                     <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="1259,478,0,0" TextWrapping="Wrap" Text="2.314" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
                     <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="1259,620,0,0" TextWrapping="Wrap" Text="14 KB" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
                     <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="1259,652,0,0" TextWrapping="Wrap" Text="154 BP" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light"/>
+                    <Canvas HorizontalAlignment="Left" Height="601" Margin="0,102,0,0" VerticalAlignment="Top" Width="1141"/>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Swarm">
@@ -38,7 +39,7 @@
             </PivotItem>
             <PivotItem Header="Match">
                 <Grid>
-                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FBCE0E8" Margin="0,0,0,755">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FFBCEB4" Margin="0,0,0,755">
                         <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                             <local:BP Height="130"/>
                             <local:BP Base="1" Height="130"/>
@@ -48,7 +49,7 @@
                             <local:BP Base="2" Height="130"/>
                         </StackPanel>
                     </ScrollViewer>
-                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Margin="121,0,931,625">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Margin="121,0,955,625">
                         <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                             <local:BP Height="130"/>
                             <local:BP Base="1" Height="130"/>
