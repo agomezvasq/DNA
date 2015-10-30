@@ -22,7 +22,7 @@
     <AppXManifest Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-10-30T20:02:32.861</Modified>
+      <Modified>2015-10-30T20:17:30.002</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -120,15 +120,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\dnaK.exe">
       <PackagePath>dnaK.exe</PackagePath>
-      <Modified>2015-10-30T20:02:32.856</Modified>
+      <Modified>2015-10-30T20:17:30.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\dnaK.xr.xml">
       <PackagePath>dnaK.xr.xml</PackagePath>
-      <Modified>2015-10-30T20:02:24.093</Modified>
+      <Modified>2015-10-30T20:13:49.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\entrypoint\dnaK.exe">
       <PackagePath>entrypoint\dnaK.exe</PackagePath>
-      <Modified>2015-10-30T20:02:24.719</Modified>
+      <Modified>2015-10-30T20:17:27.807</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Gd.png">
       <PackagePath>Gd.png</PackagePath>
@@ -168,7 +168,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-10-30T20:02:28.641</Modified>
+      <Modified>2015-10-30T20:17:29.458</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
