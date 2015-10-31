@@ -132,21 +132,23 @@ namespace dnaK.dnaK_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "dnaK.BP";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "Int32";
-            _typeNameTable[3] = "dnaK.MainPage";
-            _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[5] = "dnaK.Str";
+            _typeNameTable[3] = "dnaK.Str";
+            _typeNameTable[4] = "dnaK.MainPage";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "dnaK.StringItemM";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::dnaK.BP);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::System.Int32);
-            _typeTable[3] = typeof(global::dnaK.MainPage);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[5] = typeof(global::dnaK.Str);
+            _typeTable[3] = typeof(global::dnaK.Str);
+            _typeTable[4] = typeof(global::dnaK.MainPage);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::dnaK.StringItemM);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -182,8 +184,9 @@ namespace dnaK.dnaK_XamlTypeInfo
         }
 
         private object Activate_0_BP() { return new global::dnaK.BP(); }
-        private object Activate_3_MainPage() { return new global::dnaK.MainPage(); }
-        private object Activate_5_Str() { return new global::dnaK.Str(); }
+        private object Activate_3_Str() { return new global::dnaK.Str(); }
+        private object Activate_4_MainPage() { return new global::dnaK.MainPage(); }
+        private object Activate_6_StringItemM() { return new global::dnaK.StringItemM(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -211,20 +214,27 @@ namespace dnaK.dnaK_XamlTypeInfo
                 xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  dnaK.MainPage
-                userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+            case 3:   //  dnaK.Str
+                userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_3_Str;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Windows.UI.Xaml.Controls.Page
+            case 4:   //  dnaK.MainPage
+                userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  dnaK.Str
+            case 6:   //  dnaK.StringItemM
                 userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_5_Str;
+                userType.Activator = Activate_6_StringItemM;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

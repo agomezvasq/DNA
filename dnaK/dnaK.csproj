@@ -109,6 +109,9 @@
     <Compile Include="StringItem.xaml.cs">
       <DependentUpon>StringItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StringItemM.xaml.cs">
+      <DependentUpon>StringItemM.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -151,6 +154,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="StringItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StringItemM.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

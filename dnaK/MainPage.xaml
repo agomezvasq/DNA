@@ -44,28 +44,27 @@
             </PivotItem>
             <PivotItem Header="Match" Margin="0,0,0,-0.333">
                 <Grid>
-                    <Canvas Height="130" Margin="0,130,0,0" VerticalAlignment="Top" Background="#7FE2E2E2"/>
-                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FFBCEB4" Margin="0,0,0,755">
-                        <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                            <local:BP Height="130"/>
-                            <local:BP Base="1" Height="130"/>
-                            <local:BP Base="2" Height="130"/>
-                            <local:BP Base="3" Height="130"/>
-                            <local:BP Height="130"/>
-                            <local:BP Base="2" Height="130"/>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="{x:Null}" Height="885" VerticalAlignment="Top">
+                        <Canvas Height="883" Width="1440">
+                            <Rectangle Fill="#7FFBCEB4" Height="130" VerticalAlignment="Top" Width="1440"/>
+                            <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="364">
+                                <local:BP Height="130"/>
+                                <local:BP Base="1" Height="130"/>
+                                <local:BP Base="2" Height="130"/>
+                                <local:BP Base="3" Height="130"/>
+                                <local:BP Height="130"/>
+                                <local:BP Base="2" Height="130"/>
+                            </StackPanel>
+                            <Rectangle Fill="#7FE2E2E2" Height="130" VerticalAlignment="Top" Canvas.Top="130" Width="1440"/>
+                        </Canvas>
+                    </ScrollViewer>
+                    <ScrollViewer Height="25" VerticalAlignment="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                        <StackPanel Background="#7FEAEAEA" Height="25" VerticalAlignment="Bottom" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="1440">
+                            <local:StringItemM Margin="0,0,0,0.333" Width="251"/>
+                            <local:StringItemM Margin="0,0,0,0.333" Width="251"/>
+                            <local:StringItemM Margin="0,0,0,0.333" Width="251"/>
                         </StackPanel>
                     </ScrollViewer>
-                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Margin="121,0,955,625">
-                        <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                            <local:BP Height="130"/>
-                            <local:BP Base="1" Height="130"/>
-                            <local:BP Base="2" Height="130"/>
-                            <local:BP Base="3" Height="130"/>
-                            <local:BP Height="130"/>
-                            <local:BP Base="2" Height="130"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                    <StackPanel Background="#7FEAEAEA" Height="25" VerticalAlignment="Bottom"/>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Load" Margin="0,0,0,-0.333">
@@ -154,6 +153,7 @@
                 </Grid>
             </PivotItem>
         </Pivot>
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="1517,695,-177,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Page>
