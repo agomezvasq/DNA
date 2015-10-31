@@ -26,16 +26,16 @@
                             <local:BP Base="2" Height="130"/>
                         </StackPanel>
                     </ScrollViewer>
-                    <AppBarButton x:Name="appBarButton" HorizontalAlignment="Right" Icon="OpenFile" Label="Import" Margin="0,32,78,0" VerticalAlignment="Top"/>
-                    <AppBarButton x:Name="appBarButton_Copy" HorizontalAlignment="Right" Icon="Admin" Label="Do" Margin="0,32,10,0" VerticalAlignment="Top"/>
+                    <AppBarButton x:ConnectionId='22' x:Name="appBarButton" HorizontalAlignment="Right" Icon="OpenFile" Label="Import" Margin="0,32,78,0" VerticalAlignment="Top"/>
+                    <AppBarButton x:ConnectionId='23' x:Name="appBarButton_Copy" HorizontalAlignment="Right" Icon="Admin" Label="Do" Margin="0,32,10,0" VerticalAlignment="Top"/>
                     <Canvas HorizontalAlignment="Right" Margin="0,102,570,181.667" Width="870"/>
                     <Canvas Margin="0,102,0,181.667" HorizontalAlignment="Right" Width="243">
-                        <TextBlock x:Name="textBlock" HorizontalAlignment="Right" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="193" TextAlignment="Right" Canvas.Left="40"/>
-                        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Right" TextWrapping="Wrap" Text="25.128" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="63"/>
-                        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="AT/GC" VerticalAlignment="Top" FontSize="48" Width="193" TextAlignment="Right" Canvas.Left="40" Canvas.Top="138"/>
-                        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Right" TextWrapping="Wrap" Text="2.314" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="202"/>
-                        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Right" TextWrapping="Wrap" Text="14 KB" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="279"/>
-                        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Right" TextWrapping="Wrap" Text="154 BP" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="311"/>
+                        <TextBlock x:ConnectionId='24' x:Name="textBlock" HorizontalAlignment="Right" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="193" TextAlignment="Right" Canvas.Left="40"/>
+                        <TextBlock x:ConnectionId='25' x:Name="textBlock_Copy" HorizontalAlignment="Right" TextWrapping="Wrap" Text="25.128" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="63"/>
+                        <TextBlock x:ConnectionId='26' x:Name="textBlock_Copy1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="AT/GC" VerticalAlignment="Top" FontSize="48" Width="193" TextAlignment="Right" Canvas.Left="40" Canvas.Top="138"/>
+                        <TextBlock x:ConnectionId='27' x:Name="textBlock_Copy2" HorizontalAlignment="Right" TextWrapping="Wrap" Text="2.314" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="202"/>
+                        <TextBlock x:ConnectionId='28' x:Name="textBlock_Copy3" HorizontalAlignment="Right" TextWrapping="Wrap" Text="14 KB" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="279"/>
+                        <TextBlock x:ConnectionId='29' x:Name="textBlock_Copy4" HorizontalAlignment="Right" TextWrapping="Wrap" Text="154 BP" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="311"/>
                     </Canvas>
                     <StackPanel HorizontalAlignment="Right" Margin="0,102,319,181.667" Width="251" Background="#7F464646" BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="-2.191,0.564">
                         <local:Str Padding="0" Margin="0,0,0,4"/>
@@ -104,8 +104,8 @@
                             <local:BP Base="2" Height="130"/>
                         </StackPanel>
                     </ScrollViewer>
-                    <TextBox x:Name="textBox" Margin="0,442,0,0" TextWrapping="Wrap" Text="" IsReadOnly="True" Background="#FFE4E4E4" BorderBrush="{x:Null}"/>
-                    <AppBarButton x:Name="appBarButton1" HorizontalAlignment="Right" Icon="Copy" Label="Copy" Margin="0,130,151,0" VerticalAlignment="Top">
+                    <TextBox x:ConnectionId='9' x:Name="textBox" Margin="0,442,0,0" TextWrapping="Wrap" Text="" IsReadOnly="True" Background="#FFE4E4E4" BorderBrush="{x:Null}"/>
+                    <AppBarButton x:ConnectionId='10' x:Name="appBarButton1" HorizontalAlignment="Right" Icon="Copy" Label="Copy" Margin="0,130,151,0" VerticalAlignment="Top">
                         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Width="1440">
                             <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                 <local:BP Height="130"/>
@@ -117,8 +117,8 @@
                             </StackPanel>
                         </ScrollViewer>
                     </AppBarButton>
-                    <AppBarButton x:Name="appBarButton1_Copy" HorizontalAlignment="Right" Icon="Import" Label="Add to project" Margin="0,130,83,0" VerticalAlignment="Top">
-                        <AppBarButton x:Name="appBarButton1_Copy2" HorizontalAlignment="Left" Icon="Accept" Label="appbarbutton" VerticalAlignment="Top" Width="68">
+                    <AppBarButton x:ConnectionId='11' x:Name="appBarButton1_Copy" HorizontalAlignment="Right" Icon="Import" Label="Add to project" Margin="0,130,83,0" VerticalAlignment="Top">
+                        <AppBarButton x:ConnectionId='21' x:Name="appBarButton1_Copy2" HorizontalAlignment="Left" Icon="Accept" Label="appbarbutton" VerticalAlignment="Top" Width="68">
                             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Width="1440">
                                 <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                     <local:BP Height="130"/>
@@ -131,7 +131,7 @@
                             </ScrollViewer>
                         </AppBarButton>
                     </AppBarButton>
-                    <AppBarButton x:Name="appBarButton1_Copy1" HorizontalAlignment="Right" Label="File" Margin="0,130,219,0" VerticalAlignment="Top" Icon="OpenFile">
+                    <AppBarButton x:ConnectionId='12' x:Name="appBarButton1_Copy1" HorizontalAlignment="Right" Label="File" Margin="0,130,219,0" VerticalAlignment="Top" Icon="OpenFile">
                         <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Width="1440">
                             <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                 <local:BP Height="130"/>
@@ -143,8 +143,8 @@
                             </StackPanel>
                         </ScrollViewer>
                     </AppBarButton>
-                    <AppBarButton x:Name="appBarButton1_Copy3" HorizontalAlignment="Right" Icon="Clear" Label="Clear" Margin="0,130,10,0" VerticalAlignment="Top">
-                        <AppBarButton x:Name="appBarButton1_Copy4" HorizontalAlignment="Left" Icon="Accept" Label="appbarbutton" VerticalAlignment="Top" Width="68">
+                    <AppBarButton x:ConnectionId='13' x:Name="appBarButton1_Copy3" HorizontalAlignment="Right" Icon="Clear" Label="Clear" Margin="0,130,10,0" VerticalAlignment="Top">
+                        <AppBarButton x:ConnectionId='20' x:Name="appBarButton1_Copy4" HorizontalAlignment="Left" Icon="Accept" Label="appbarbutton" VerticalAlignment="Top" Width="68">
                             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Width="1440">
                                 <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                     <local:BP Height="130"/>
@@ -157,25 +157,25 @@
                             </ScrollViewer>
                         </AppBarButton>
                     </AppBarButton>
-                    <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Right" Margin="0,276,10,0" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="300" TextAlignment="Right"/>
-                    <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Right" Margin="0,340,10,0" TextWrapping="Wrap" Text="25.128" VerticalAlignment="Top" FontSize="26.667" Width="300" TextAlignment="Right" FontFamily="Segoe UI Light"/>
-                    <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Right" Margin="0,276,186,0" TextWrapping="Wrap" Text="Base pairs" VerticalAlignment="Top" FontSize="48" Width="300" TextAlignment="Center"/>
-                    <TextBlock x:Name="textBlock_Copy8" HorizontalAlignment="Right" Margin="0,340,186,0" TextWrapping="Wrap" Text="1576" VerticalAlignment="Top" FontSize="26.667" Width="300" TextAlignment="Center" FontFamily="Segoe UI Light"/>
-                    <TextBlock x:Name="textBlock_Copy9" HorizontalAlignment="Right" Margin="0,276,491,0" TextWrapping="Wrap" Text="Compression" VerticalAlignment="Top" FontSize="48" Width="300" TextAlignment="Center"/>
-                    <TextBlock x:Name="textBlock_Copy10" HorizontalAlignment="Right" Margin="0,340,491,0" TextWrapping="Wrap" Text="1576" VerticalAlignment="Top" FontSize="26.667" Width="300" TextAlignment="Center" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:ConnectionId='14' x:Name="textBlock_Copy5" HorizontalAlignment="Right" Margin="0,276,10,0" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="300" TextAlignment="Right"/>
+                    <TextBlock x:ConnectionId='15' x:Name="textBlock_Copy6" HorizontalAlignment="Right" Margin="0,340,10,0" TextWrapping="Wrap" Text="25.128" VerticalAlignment="Top" FontSize="26.667" Width="300" TextAlignment="Right" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:ConnectionId='16' x:Name="textBlock_Copy7" HorizontalAlignment="Right" Margin="0,276,186,0" TextWrapping="Wrap" Text="Base pairs" VerticalAlignment="Top" FontSize="48" Width="300" TextAlignment="Center"/>
+                    <TextBlock x:ConnectionId='17' x:Name="textBlock_Copy8" HorizontalAlignment="Right" Margin="0,340,186,0" TextWrapping="Wrap" Text="1576" VerticalAlignment="Top" FontSize="26.667" Width="300" TextAlignment="Center" FontFamily="Segoe UI Light"/>
+                    <TextBlock x:ConnectionId='18' x:Name="textBlock_Copy9" HorizontalAlignment="Right" Margin="0,276,491,0" TextWrapping="Wrap" Text="Compression" VerticalAlignment="Top" FontSize="48" Width="300" TextAlignment="Center"/>
+                    <TextBlock x:ConnectionId='19' x:Name="textBlock_Copy10" HorizontalAlignment="Right" Margin="0,340,491,0" TextWrapping="Wrap" Text="1576" VerticalAlignment="Top" FontSize="26.667" Width="300" TextAlignment="Center" FontFamily="Segoe UI Light"/>
                 </Grid>
             </PivotItem>
             <PivotItem Header="About">
                 <Grid>
                     <Canvas HorizontalAlignment="Center" Height="382" Margin="0" VerticalAlignment="Center" Width="480">
-                        <Image x:Name="image" Height="130" Width="130" Source="Assets/DNAK.png" Canvas.Left="175" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="DNAK" VerticalAlignment="Top" FontSize="32" TextAlignment="Center" Canvas.Top="150" Width="480"/>
-                        <TextBlock x:Name="textBlock1_Copy" TextWrapping="Wrap" Text="by Andrés Gómez" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="192" Width="480"/>
-                        <TextBlock x:Name="textBlock1_Copy1" TextWrapping="Wrap" Text="agomezvasq@gmail.com" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="212" Width="480"/>
-                        <TextBlock x:Name="textBlock1_Copy2" TextWrapping="Wrap" Text="Universidad EAFIT" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" Canvas.Top="240" Width="480"/>
-                        <TextBlock x:Name="textBlock1_Copy3" TextWrapping="Wrap" Text="id: 201420008010" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="262" Width="480"/>
-                        <TextBlock x:Name="textBlock1_Copy4" TextWrapping="Wrap" Text="agomezv3@eafit.edu.co" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="282" Width="480"/>
-                        <TextBlock x:Name="textBlock1_Copy5" TextWrapping="Wrap" Text="kodei. 2015" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="308" Width="480"/>
+                        <Image x:ConnectionId='1' x:Name="image" Height="130" Width="130" Source="Assets/DNAK.png" Canvas.Left="175" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock x:ConnectionId='2' x:Name="textBlock1" TextWrapping="Wrap" Text="DNAK" VerticalAlignment="Top" FontSize="32" TextAlignment="Center" Canvas.Top="150" Width="480"/>
+                        <TextBlock x:ConnectionId='3' x:Name="textBlock1_Copy" TextWrapping="Wrap" Text="by Andrés Gómez" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="192" Width="480"/>
+                        <TextBlock x:ConnectionId='4' x:Name="textBlock1_Copy1" TextWrapping="Wrap" Text="agomezvasq@gmail.com" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="212" Width="480"/>
+                        <TextBlock x:ConnectionId='5' x:Name="textBlock1_Copy2" TextWrapping="Wrap" Text="Universidad EAFIT" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" Canvas.Top="240" Width="480"/>
+                        <TextBlock x:ConnectionId='6' x:Name="textBlock1_Copy3" TextWrapping="Wrap" Text="id: 201420008010" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="262" Width="480"/>
+                        <TextBlock x:ConnectionId='7' x:Name="textBlock1_Copy4" TextWrapping="Wrap" Text="agomezv3@eafit.edu.co" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="282" Width="480"/>
+                        <TextBlock x:ConnectionId='8' x:Name="textBlock1_Copy5" TextWrapping="Wrap" Text="kodei. 2015" VerticalAlignment="Top" FontSize="16.667" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="308" Width="480"/>
                     </Canvas>
                 </Grid>
             </PivotItem>
@@ -183,3 +183,4 @@
 
     </Grid>
 </Page>
+

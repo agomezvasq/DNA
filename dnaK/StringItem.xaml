@@ -7,8 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Height="25.249" Width="250.548" Margin="0,0,0,4">
 
-    <Grid Margin="0,0,0,0.333" Background="White">
-        <TextBlock x:Name="textBlock" Margin="2,2,2,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+    <Grid x:Name="g" Margin="0,0,0,0.333" Background="White">
+        <TextBlock x:Name="text" Margin="2,2,29,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20"/>
+        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Cancel" Label="appbarbutton" Margin="222,-12,-1,-2" VerticalAlignment="Top" IsCompact="True" Width="30" Click="appBarButton_Click"/>
 
     </Grid>
 </UserControl>

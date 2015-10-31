@@ -23,5 +23,26 @@ namespace dnaK
         {
             this.InitializeComponent();
         }
+
+        public string DNASequence
+        {
+            get
+            {
+                return text.Text;
+            }
+            set
+            {
+                if (value.Length <= 21)
+                    text.FontSize = 5.6d;
+                else
+                    text.FontSize = 11.25d;
+                text.Text = value;
+            }
+        }
+
+        private void appBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            ((StackPanel)this.Parent).Children.Remove(this);
+        }
     }
 }

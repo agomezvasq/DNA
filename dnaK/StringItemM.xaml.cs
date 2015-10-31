@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,6 +23,46 @@ namespace dnaK
         public StringItemM()
         {
             this.InitializeComponent();
+        }
+
+        private bool blue;
+
+        public string DNASequence
+        {
+            get
+            {
+                return text.Text;
+            }
+            set
+            {
+                if (value.Length <= 9)
+                    text.FontSize = 5.6d;
+                else
+                    text.FontSize = 11.25d;
+                text.Text = value;
+                l.Text = text.Text.Length.ToString();
+            }
+        }
+
+        public bool Max
+        {
+            get
+            {
+                return blue;
+            }
+            set
+            {
+                if (value)
+                {
+                    g.Background = new SolidColorBrush(Color.FromArgb(255, 27, 161, 226));
+                    g.RequestedTheme = ElementTheme.Dark;
+                } else
+                {
+                    g.Background = new SolidColorBrush(Colors.White);
+                    g.RequestedTheme = ElementTheme.Default;
+                }
+                blue = value;
+            }
         }
     }
 }
