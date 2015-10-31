@@ -33,9 +33,10 @@ namespace dnaK
             set
             {
                 if (value.Length <= 21)
-                    text.FontSize = 5.6d;
-                else
                     text.FontSize = 11.25d;
+                else
+                    text.FontSize = 5.6d;
+
                 text.Text = value;
             }
         }

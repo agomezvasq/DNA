@@ -138,8 +138,8 @@ namespace dnaK.dnaK_XamlTypeInfo
             _typeNameTable[2] = "Int32";
             _typeNameTable[3] = "dnaK.StringItemM";
             _typeNameTable[4] = "Boolean";
-            _typeNameTable[5] = "dnaK.Str";
-            _typeNameTable[6] = "String";
+            _typeNameTable[5] = "String";
+            _typeNameTable[6] = "dnaK.Str";
             _typeNameTable[7] = "dnaK.MainPage";
             _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
 
@@ -149,8 +149,8 @@ namespace dnaK.dnaK_XamlTypeInfo
             _typeTable[2] = typeof(global::System.Int32);
             _typeTable[3] = typeof(global::dnaK.StringItemM);
             _typeTable[4] = typeof(global::System.Boolean);
-            _typeTable[5] = typeof(global::dnaK.Str);
-            _typeTable[6] = typeof(global::System.String);
+            _typeTable[5] = typeof(global::System.String);
+            _typeTable[6] = typeof(global::dnaK.Str);
             _typeTable[7] = typeof(global::dnaK.MainPage);
             _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
         }
@@ -189,7 +189,7 @@ namespace dnaK.dnaK_XamlTypeInfo
 
         private object Activate_0_BP() { return new global::dnaK.BP(); }
         private object Activate_3_StringItemM() { return new global::dnaK.StringItemM(); }
-        private object Activate_5_Str() { return new global::dnaK.Str(); }
+        private object Activate_6_Str() { return new global::dnaK.Str(); }
         private object Activate_7_MainPage() { return new global::dnaK.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
@@ -222,6 +222,7 @@ namespace dnaK.dnaK_XamlTypeInfo
                 userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_3_StringItemM;
                 userType.AddMemberName("Max");
+                userType.AddMemberName("DNASequence");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -230,16 +231,16 @@ namespace dnaK.dnaK_XamlTypeInfo
                 xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  dnaK.Str
+            case 5:   //  String
+                xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  dnaK.Str
                 userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_5_Str;
+                userType.Activator = Activate_6_Str;
                 userType.AddMemberName("DNASequence");
                 userType.SetIsLocalType();
                 xamlType = userType;
-                break;
-
-            case 6:   //  String
-                xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 7:   //  dnaK.MainPage
@@ -277,12 +278,22 @@ namespace dnaK.dnaK_XamlTypeInfo
             var that = (global::dnaK.StringItemM)instance;
             that.Max = (global::System.Boolean)Value;
         }
-        private object get_2_Str_DNASequence(object instance)
+        private object get_2_StringItemM_DNASequence(object instance)
+        {
+            var that = (global::dnaK.StringItemM)instance;
+            return that.DNASequence;
+        }
+        private void set_2_StringItemM_DNASequence(object instance, object Value)
+        {
+            var that = (global::dnaK.StringItemM)instance;
+            that.DNASequence = (global::System.String)Value;
+        }
+        private object get_3_Str_DNASequence(object instance)
         {
             var that = (global::dnaK.Str)instance;
             return that.DNASequence;
         }
-        private void set_2_Str_DNASequence(object instance, object Value)
+        private void set_3_Str_DNASequence(object instance, object Value)
         {
             var that = (global::dnaK.Str)instance;
             that.DNASequence = (global::System.String)Value;
@@ -307,11 +318,17 @@ namespace dnaK.dnaK_XamlTypeInfo
                 xamlMember.Getter = get_1_StringItemM_Max;
                 xamlMember.Setter = set_1_StringItemM_Max;
                 break;
+            case "dnaK.StringItemM.DNASequence":
+                userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.StringItemM");
+                xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "DNASequence", "String");
+                xamlMember.Getter = get_2_StringItemM_DNASequence;
+                xamlMember.Setter = set_2_StringItemM_DNASequence;
+                break;
             case "dnaK.Str.DNASequence":
                 userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.Str");
                 xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "DNASequence", "String");
-                xamlMember.Getter = get_2_Str_DNASequence;
-                xamlMember.Setter = set_2_Str_DNASequence;
+                xamlMember.Getter = get_3_Str_DNASequence;
+                xamlMember.Setter = set_3_Str_DNASequence;
                 break;
             }
             return xamlMember;

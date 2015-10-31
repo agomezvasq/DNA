@@ -85,7 +85,7 @@
                     </ScrollViewer>
                     <ScrollViewer Height="35" VerticalAlignment="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#7FEAEAEA">
                         <StackPanel Height="25" VerticalAlignment="Top" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="1440">
-                            <local:StringItemM Margin="0,0,2,0.333" Width="251" Max="True"/>
+                            <local:StringItemM Margin="0,0,2,0.333" Width="251" Max="True" DNASequence=""/>
                             <local:StringItemM Margin="0,0,2,0.333" Width="251" BorderThickness="0"/>
                             <local:StringItemM Margin="0,0,2,0.333" Width="251"/>
                         </StackPanel>
