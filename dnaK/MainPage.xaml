@@ -86,8 +86,8 @@
                     <ScrollViewer Height="35" VerticalAlignment="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#7FEAEAEA">
                         <StackPanel Height="25" VerticalAlignment="Top" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="1440">
                             <local:StringItemM Margin="0,0,2,0.333" Width="251" Max="True" DNASequence=""/>
-                            <local:StringItemM Margin="0,0,2,0.333" Width="251" BorderThickness="0"/>
-                            <local:StringItemM Margin="0,0,2,0.333" Width="251"/>
+                            <local:StringItemM Margin="0,0,2,0.333" Width="251" BorderThickness="0" DNASequence=""/>
+                            <local:StringItemM Margin="0,0,2,0.333" Width="251" DNASequence=""/>
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
@@ -180,6 +180,10 @@
                 </Grid>
             </PivotItem>
         </Pivot>
+        <AutoSuggestBox HorizontalAlignment="Left" Margin="831,10,0,0" VerticalAlignment="Top" Width="400" QueryIcon="Zoom" PlaceholderText="Search" IsSuggestionListOpen="True"/>
+        <AppBarButton x:Name="appBarButton2" HorizontalAlignment="Left" Icon="Download" Label="Save" Margin="1236,-4,0,0" VerticalAlignment="Top"/>
+        <AppBarToggleButton x:Name="appBarToggleButton" HorizontalAlignment="Left" Icon="View" Label="Aminoacids" Margin="1304,-4,0,0" VerticalAlignment="Top"/>
+        <AppBarButton x:Name="appBarButton3" HorizontalAlignment="Left" Label="Snapshot" Margin="1372,-4,0,0" VerticalAlignment="Top" Icon="Camera"/>
 
     </Grid>
 </Page>
