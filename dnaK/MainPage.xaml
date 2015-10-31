@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="White">
-        <Pivot Title="" SelectedIndex="0">
+        <Pivot Title="" SelectedIndex="1">
             <PivotItem Header="Input" Margin="0,0,0,-0.333">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -50,18 +50,38 @@
             <PivotItem Header="Match" Margin="0,0,0,-0.333">
                 <Grid>
                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="{x:Null}" Margin="0,0,0,35">
-                        <Canvas Height="883" Width="1440">
-                            <Rectangle Fill="#7FFBCEB4" Height="130" VerticalAlignment="Top" Width="1440"/>
-                            <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="364">
-                                <local:BP Height="130"/>
-                                <local:BP Base="1" Height="130"/>
-                                <local:BP Base="2" Height="130"/>
-                                <local:BP Base="3" Height="130"/>
-                                <local:BP Height="130"/>
-                                <local:BP Base="2" Height="130"/>
-                            </StackPanel>
-                            <Rectangle Fill="#7FE2E2E2" Height="130" VerticalAlignment="Top" Canvas.Top="130" Width="1440"/>
-                        </Canvas>
+                        <StackPanel Height="850" Width="1440">
+                            <Canvas Height="130" Background="#7FFBCEB4" Margin="0,0,0.333,0">
+                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="364">
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="1" Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                    <local:BP Base="3" Height="130"/>
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                </StackPanel>
+                            </Canvas>
+                            <Canvas Height="130" Background="#7FE2E2E2">
+                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="364" Canvas.Left="243">
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="1" Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                    <local:BP Base="3" Height="130"/>
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                </StackPanel>
+                            </Canvas>
+                            <Canvas Height="130" Background="#7FE2E2E2">
+                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="364" Canvas.Left="61">
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="1" Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                    <local:BP Base="3" Height="130"/>
+                                    <local:BP Height="130"/>
+                                    <local:BP Base="2" Height="130"/>
+                                </StackPanel>
+                            </Canvas>
+                        </StackPanel>
                     </ScrollViewer>
                     <ScrollViewer Height="35" VerticalAlignment="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#7FEAEAEA">
                         <StackPanel Height="25" VerticalAlignment="Top" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="1440">

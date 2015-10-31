@@ -10,10 +10,10 @@
     d:DesignWidth="400" Width="251" Height="25">
 
     <Grid Background="White">
-        <TextBlock x:Name="textBlock" Margin="9,2,140,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock x:Name="textBlock_Copy" Margin="0,2,34,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="35" TextAlignment="Right"/>
-        <TextBlock x:Name="textBlock_Copy1" Margin="0,2,69,0" TextWrapping="Wrap" Text="100%" VerticalAlignment="Top" HorizontalAlignment="Right" Width="39" TextAlignment="Right"/>
-        <ToggleSwitch x:Name="toggleSwitch" Header="" HorizontalAlignment="Right" Margin="0,-8,110,-7" VerticalAlignment="Top" OffContent="" OnContent="" MinWidth="0" Width="49"/>
+        <TextBlock x:Name="text" Margin="2,2,151,0" TextWrapping="Wrap" Text="GGGGGGGGG" VerticalAlignment="Top" FontSize="15" Height="20"/>
+        <TextBlock x:Name="l" Margin="0,2,2,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="60" TextAlignment="Right"/>
+        <TextBlock x:Name="pr" Margin="0,2,62,0" TextWrapping="Wrap" Text="100%" VerticalAlignment="Top" HorizontalAlignment="Right" Width="40" TextAlignment="Right"/>
+        <ToggleSwitch x:Name="sw" Header="" HorizontalAlignment="Right" Margin="0,-8,102,-7" VerticalAlignment="Top" OffContent="" OnContent="" MinWidth="0" Width="49"/>
 
     </Grid>
 </UserControl>
