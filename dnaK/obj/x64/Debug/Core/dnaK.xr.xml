@@ -66,6 +66,8 @@
       <RootProperty Name="QueryIcon" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="IsSuggestionListOpen" />
+      <RootEvent Name="TextChanged" />
+      <RootEvent Name="QuerySubmitted" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="HorizontalAlignment" />
@@ -137,14 +139,9 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="RenderTransformOrigin" />
+      <RootEvent Name="LayoutUpdated" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
-    <RootType FullName="dnaK.StringItemM">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Max" />
-      <RootProperty Name="DNASequence" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition" />
     <RootType FullName="dnaK.MainPage" />
     <RootType FullName="dnaK.Str" />
@@ -159,5 +156,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="UseSystemFocusVisuals" />
     </RootType>
+    <RootType FullName="dnaK.StringItemM" />
   </Roots.RootTypes>
 </Roots>

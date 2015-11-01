@@ -35,12 +35,12 @@ namespace dnaK
             }
             set
             {
-                if (value.Length <= 15)
+                if (value.Length <= 96)
                     text.FontSize = 11.25d;
                 else
                     text.FontSize = 5.6d;
-
                 text.Text = value;
+                l.Text = value.Length.ToString();
             }
         }
 

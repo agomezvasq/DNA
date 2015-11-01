@@ -40,7 +40,7 @@ namespace dnaK
                 else
                     text.FontSize = 5.6d;
                 text.Text = value;
-                l.Text = text.Text.Length.ToString();
+                l.Text = value.Length.ToString();
             }
         }
 

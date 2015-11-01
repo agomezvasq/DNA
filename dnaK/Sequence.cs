@@ -27,8 +27,15 @@ namespace DNA
             this.at = dat[0];
             this.gc = dat[1];
 
-            this.gcc = Math.Round((double)this.gc / ((double)this.at + (double)this.gc) * 100, 1);
-            this.atgc_rat = Math.Round((double)this.at / (double)this.gc, 1);
+            if (s.Length == 0)
+            {
+                this.gcc = 0d;
+                this.atgc_rat = 0d;
+            } else
+            {
+                this.gcc = Math.Round((double)this.gc / ((double)this.at + (double)this.gc) * 100, 1);
+                this.atgc_rat = Math.Round((double)this.at / (double)this.gc, 3);
+            }
         }
 
         public string getSeq()    { return this.e; }
