@@ -31,7 +31,7 @@
                         <TextBlock x:Name="bpt" TextWrapping="Wrap" Text="total: 0 BP" VerticalAlignment="Top" FontSize="26.667" Width="356" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="328"/>
                     </Canvas>
                     <ScrollViewer Margin="0,102,356,129.667">
-                        <StackPanel x:Name="stackPStrings" Background="#7FE2E2E2" BorderBrush="Black" BorderThickness="0" RenderTransformOrigin="-2.191,0.564" LayoutUpdated="stackPStrings_LayoutUpdated"/>
+                        <StackPanel x:Name="stackPStrings" Background="#7FE2E2E2" BorderBrush="Black" BorderThickness="0" RenderTransformOrigin="-2.191,0.564"/>
                     </ScrollViewer>
                 </Grid>
             </PivotItem>

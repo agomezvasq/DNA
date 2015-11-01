@@ -54,8 +54,23 @@ namespace dnaK
             Str sI = new Str();
             sI.Width = double.NaN;
             sI.DNASequence = seq.getSeq();
-            stackPStrings.Children.Add(sI);
 
+            if (stackPStrings.Children.Count == 0)
+            {
+                sI.Max = true;
+                stackPStrings.Children.Add(sI);
+            } else
+            {
+                foreach (Str sK in stackPStrings.Children)
+                    sK.Max = false;
+
+                int i = stackPStrings.Children.Count - 1;
+                while (i >= 0 && ((Str)stackPStrings.Children[i]).DNASequence.Length < sI.DNASequence.Length)
+                    i--;
+
+                stackPStrings.Children.Insert(i + 1, sI);
+                ((Str)stackPStrings.Children[0]).Max = true;
+            }
             t.Text = "";
         }
 
@@ -82,75 +97,6 @@ namespace dnaK
 
             bps.Text = "string: " + s.bp() + "BP";
             bpt.Text = "total: " + (tBP + s.bp()) + "BP";
-        }
-
-        private void stackPStrings_LayoutUpdated(object sender, object e)
-        {
-            if (stackPStrings.Children.Count <= 1)
-                return;
-            sortSequences();
-        }
-
-        public void sortSequences()
-        {
-            int c = stackPStrings.Children.Count;
-            int[,] m = new int[c,2];
-            for (int i=0; i<c; i++)
-            {
-                m[i,0] = i;
-                m[i,1] = ((Str)stackPStrings.Children[i]).DNASequence.Length;
-                ((Str)stackPStrings.Children[i]).Max = false;
-            }
-
-            int [,] mS = quickSort(m, 0, c-1);
-
-            for (int k=0; k<c; k++)
-            {
-                Str sI = (Str) stackPStrings.Children[m[0,k]];
-                stackPStrings.Children.Remove(sI);
-                stackPStrings.Children.Insert(m[1,k], sI);
-            }
-
-            ((Str)stackPStrings.Children[c-1]).Max = true;
-        }
-
-        public int [,] quickSort(int [,] m, int lo, int hi)
-        {
-            int part = partition(m, lo, hi);
-            if (lo < part - 1)
-                quickSort(m, lo, part - 1);
-            if (part < hi)
-                quickSort(m, part, hi);
-
-            return m;
-        }
-
-        public int partition(int [,] m, int lo, int hi)
-        {
-            int i = lo;
-            int j = hi;
-            int p = m[1, (lo + hi) / 2];
-
-            while (i <= j)
-            {
-                if (m[1,i] < p)
-                    i++;
-                if (m[1,j] > p)
-                    j--;
-                if (i <= j)
-                {
-                    int temp1 = m[1,i];
-                    int temp2 = m[0,i];
-                    m[1,i] = m[1,j];
-                    m[0,i] = m[0,j];
-                    m[1,j] = temp1;
-                    m[0,j] = temp2;
-                    i++;
-                    j--;
-                }
-            }
-
-            return i;
         }
     }
 }

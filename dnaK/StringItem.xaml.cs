@@ -35,12 +35,8 @@ namespace dnaK
             }
             set
             {
-                if (value.Length <= 96)
-                    text.FontSize = 11.25d;
-                else
-                    text.FontSize = 5.6d;
-                text.Text = value;
                 l.Text = value.Length.ToString();
+                text.Text = value;
             }
         }
 
@@ -68,6 +64,11 @@ namespace dnaK
 
         private void appBarButton_Click(object sender, RoutedEventArgs e)
         {
+            if (Max && ((StackPanel)this.Parent).Children.Count > 1) 
+            {
+                Max = false;
+                ((Str)((StackPanel)this.Parent).Children[1]).Max = true;
+            }
             ((StackPanel)this.Parent).Children.Remove(this);
         }
     }
