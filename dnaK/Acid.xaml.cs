@@ -13,23 +13,27 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace dnaK
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class Acid : UserControl
     {
-        public MainPage()
+        public Acid()
         {
             this.InitializeComponent();
         }
 
-        private void appBarToggleButton_Checked(object sender, RoutedEventArgs e)
+        public string AminoAcid
         {
-
+            get
+            {
+                return textBlock.Text;
+            }
+            set
+            {
+                textBlock.Text = value;
+            }
         }
     }
 }

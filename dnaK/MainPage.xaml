@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="White">
-        <Pivot Title="" SelectedIndex="1">
+        <Pivot Title="">
             <PivotItem Header="Input" Margin="0,0,0,-0.333">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -28,57 +28,34 @@
                     </ScrollViewer>
                     <AppBarButton x:Name="appBarButton" HorizontalAlignment="Right" Icon="OpenFile" Label="Import" Margin="0,32,78,0" VerticalAlignment="Top"/>
                     <AppBarButton x:Name="appBarButton_Copy" HorizontalAlignment="Right" Icon="Admin" Label="Do" Margin="0,32,10,0" VerticalAlignment="Top"/>
-                    <Canvas HorizontalAlignment="Right" Margin="0,102,570,181.667" Width="870"/>
-                    <Canvas Margin="0,102,0,181.667" HorizontalAlignment="Right" Width="243">
-                        <TextBlock x:Name="textBlock" HorizontalAlignment="Right" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="193" TextAlignment="Right" Canvas.Left="40"/>
-                        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Right" TextWrapping="Wrap" Text="25.128" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="63"/>
-                        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Right" TextWrapping="Wrap" Text="AT/GC" VerticalAlignment="Top" FontSize="48" Width="193" TextAlignment="Right" Canvas.Left="40" Canvas.Top="138"/>
-                        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Right" TextWrapping="Wrap" Text="2.314" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="202"/>
-                        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Right" TextWrapping="Wrap" Text="14 KB" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="279"/>
-                        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Right" TextWrapping="Wrap" Text="154 BP" VerticalAlignment="Top" FontSize="26.667" Width="161" TextAlignment="Right" FontFamily="Segoe UI Light" Canvas.Left="72" Canvas.Top="311"/>
+                    <Canvas Margin="0,0,10,130" HorizontalAlignment="Right" Width="336" VerticalAlignment="Center" Height="360">
+                        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="336" TextAlignment="Center"/>
+                        <TextBlock x:Name="GCs" TextWrapping="Wrap" Text="string: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="63"/>
+                        <TextBlock x:Name="textBlock_Copy1" TextWrapping="Wrap" Text="AT/GC" VerticalAlignment="Top" FontSize="48" Width="336" TextAlignment="Center" Canvas.Top="138"/>
+                        <TextBlock x:Name="ATs" TextWrapping="Wrap" Text="string: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="202"/>
+                        <TextBlock x:Name="bps" TextWrapping="Wrap" Text="STRING: 0 BP" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="296"/>
+                        <TextBlock x:Name="GCt" TextWrapping="Wrap" Text="total: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="95"/>
+                        <TextBlock x:Name="ATt" TextWrapping="Wrap" Text="total: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="234"/>
+                        <TextBlock x:Name="bpt" TextWrapping="Wrap" Text="TOTAL: 0 BP" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="328"/>
                     </Canvas>
-                    <StackPanel HorizontalAlignment="Right" Margin="0,102,319,181.667" Width="251" Background="#7F464646" BorderBrush="Black" BorderThickness="1" RenderTransformOrigin="-2.191,0.564">
-                        <local:Str Padding="0" Margin="0,0,0,4"/>
-                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
-                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
-                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
-                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
-                        <local:Str Padding="0" Margin="0.166,0,0.166,4"/>
-                    </StackPanel>
+                    <ScrollViewer Margin="0,102,356,129.667">
+                        <StackPanel Background="#7FE2E2E2" BorderBrush="Black" BorderThickness="0" RenderTransformOrigin="-2.191,0.564"/>
+                    </ScrollViewer>
                 </Grid>
             </PivotItem>
             <PivotItem Header="Match" Margin="0,0,0,-0.333">
                 <Grid>
                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="{x:Null}" Margin="0,0,0,35">
                         <StackPanel Height="850" Width="1440">
+                            <StackPanel Height="20" VerticalAlignment="Top" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                             <Canvas Height="130" Background="#7FFBCEB4" Margin="0,0,0.333,0">
-                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="364">
+                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                                     <local:BP Height="130"/>
-                                    <local:BP Base="1" Height="130"/>
-                                    <local:BP Base="2" Height="130"/>
-                                    <local:BP Base="3" Height="130"/>
-                                    <local:BP Height="130"/>
-                                    <local:BP Base="2" Height="130"/>
                                 </StackPanel>
                             </Canvas>
                             <Canvas Height="130" Background="#7FE2E2E2">
-                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="364" Canvas.Left="243">
+                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Canvas.Left="243">
                                     <local:BP Height="130"/>
-                                    <local:BP Base="1" Height="130"/>
-                                    <local:BP Base="2" Height="130"/>
-                                    <local:BP Base="3" Height="130"/>
-                                    <local:BP Height="130"/>
-                                    <local:BP Base="2" Height="130"/>
-                                </StackPanel>
-                            </Canvas>
-                            <Canvas Height="130" Background="#7FE2E2E2">
-                                <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="364" Canvas.Left="61">
-                                    <local:BP Height="130"/>
-                                    <local:BP Base="1" Height="130"/>
-                                    <local:BP Base="2" Height="130"/>
-                                    <local:BP Base="3" Height="130"/>
-                                    <local:BP Height="130"/>
-                                    <local:BP Base="2" Height="130"/>
                                 </StackPanel>
                             </Canvas>
                         </StackPanel>
@@ -86,8 +63,6 @@
                     <ScrollViewer Height="35" VerticalAlignment="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#7FEAEAEA">
                         <StackPanel Height="25" VerticalAlignment="Top" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="1440">
                             <local:StringItemM Margin="0,0,2,0.333" Width="251" Max="True" DNASequence=""/>
-                            <local:StringItemM Margin="0,0,2,0.333" Width="251" BorderThickness="0" DNASequence=""/>
-                            <local:StringItemM Margin="0,0,2,0.333" Width="251" DNASequence=""/>
                         </StackPanel>
                     </ScrollViewer>
                 </Grid>
@@ -180,10 +155,9 @@
                 </Grid>
             </PivotItem>
         </Pivot>
-        <AutoSuggestBox HorizontalAlignment="Left" Margin="831,10,0,0" VerticalAlignment="Top" Width="400" QueryIcon="Zoom" PlaceholderText="Search" IsSuggestionListOpen="True"/>
-        <AppBarButton x:Name="appBarButton2" HorizontalAlignment="Left" Icon="Download" Label="Save" Margin="1236,-4,0,0" VerticalAlignment="Top"/>
-        <AppBarToggleButton x:Name="appBarToggleButton" HorizontalAlignment="Left" Icon="View" Label="Aminoacids" Margin="1304,-4,0,0" VerticalAlignment="Top"/>
-        <AppBarButton x:Name="appBarButton3" HorizontalAlignment="Left" Label="Snapshot" Margin="1372,-4,0,0" VerticalAlignment="Top" Icon="Camera"/>
+        <AutoSuggestBox HorizontalAlignment="Left" Margin="899,10,0,0" VerticalAlignment="Top" Width="400" QueryIcon="Zoom" PlaceholderText="Search" IsSuggestionListOpen="True"/>
+        <AppBarButton x:Name="appBarButton2" HorizontalAlignment="Left" Icon="Download" Label="Save" Margin="1304,-4,0,0" VerticalAlignment="Top"/>
+        <AppBarToggleButton x:Name="appBarToggleButton" HorizontalAlignment="Left" Icon="View" Label="Aminoacids" Margin="1372,-4,0,0" VerticalAlignment="Top" Checked="appBarToggleButton_Checked"/>
 
     </Grid>
 </Page>
