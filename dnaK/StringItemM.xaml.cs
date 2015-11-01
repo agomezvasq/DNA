@@ -22,9 +22,9 @@ namespace dnaK
     public sealed partial class StringItemM : UserControl
     {
         private Sequence s;
-        private Canvas c;
+        private StackPanel st;
 
-        public StringItemM(Sequence s, Canvas c)
+        public StringItemM(Sequence s, StackPanel st)
         {
             this.InitializeComponent();
 
@@ -32,7 +32,7 @@ namespace dnaK
             this.text.Text = s.getSeq();
             this.l.Text = s.getSeq().Length.ToString();
 
-            this.c = c;
+            this.st = st;
         }
 
         private bool blue;
@@ -66,7 +66,10 @@ namespace dnaK
             }
             set
             {
-                c.Visibility = Visibility.Visible;
+                if (value)
+                    c.Visibility = Visibility.Visible;
+                else
+                    c.Visibility = Visibility.Collapsed;
                 sw.IsOn = value;
             }
         }

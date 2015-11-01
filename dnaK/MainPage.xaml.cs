@@ -130,20 +130,40 @@ namespace dnaK
 
         public void match(Str sI, int id)
         {
-            Canvas c = new Canvas();
-            c.Width = double.NaN;
-            c.Height = 130d;
-            if (sI.Max)
-                c.Background = new SolidColorBrush(Color.FromArgb(127, 251, 206, 180));
-            else
-                c.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
+            StackPanel sP = new StackPanel();
+            sP.Width = double.NaN;
+            sP.Height = 130d;
+            sP.Orientation = Orientation.Horizontal;
 
-            StringItemM sM = new StringItemM(sI.getSequence(), c);
+            StringItemM sM = new StringItemM(sI.getSequence(), sP);
+
+            for (int i=0; i<sI.getSequence().getSeq().Length; i++)
+            {
+                BP bp = new BP();
+                bp.Base = sI.getSequence().getSeq()[i];
+
+                sP.Children.Add(bp);
+            }
+
             if (sI.Max)
             {
                 sM.Max = true;
-                sM.Show = true;
+
+                maxStack.Children.Clear();
+                maxStack.Children.Add(sP);
             }
+            else
+            {
+                Canvas c = new Canvas();
+                c.Width = 1440d;
+                c.Height = 130d;
+                c.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
+                c.Visibility = Visibility.Collapsed;
+
+                c.Children.Add(sP);
+                matchDNA.Children.Insert(id, c);
+            }
+
             stackSequences.Children.Add(sM);
         }
     }
