@@ -7,9 +7,8 @@ using System.Windows;
 
 namespace DNA
 {
-    class Sequence
+    public class Sequence
     {
-
         protected string s;
         protected string e;
 
@@ -19,19 +18,14 @@ namespace DNA
         protected int at;
         protected int gc;
 
-        protected int min_r;
-        protected int max_r;
-
         public Sequence(string s)
         {
             this.s = s;
             this.e = encode(s);
 
             int[] dat = data(e);
-            this.min_r = dat[0];
-            this.max_r = dat[1];
-            this.at = dat[2];
-            this.gc = dat[3];
+            this.at = dat[0];
+            this.gc = dat[1];
 
             this.gcc = Math.Round((double)this.gc / ((double)this.at + (double)this.gc) * 100, 1);
             this.atgc_rat = Math.Round((double)this.at / (double)this.gc, 1);
@@ -41,15 +35,13 @@ namespace DNA
         public string getStr()    { return this.s; }
         public int getAT()        { return this.at; }
         public int getGC()        { return this.gc; }
-
+        public int bp()           { return this.e.Length; }
         public double getATGC_R() { return this.atgc_rat; }
         public double getGC_C()   { return this.gcc; }
-        public int getMINRan()    { return this.min_r; }
-        public int getMAXRan()    { return this.max_r; }
 
-        public int getAmino(char c)
+        public int getN(char c)
         {
-            if (c == 'A' || c == 'U')
+            if (c == 'A' || c == 'T')
                 return at / 2;
             if (c == 'G' || c == 'C')
                 return gc / 2;
@@ -58,30 +50,20 @@ namespace DNA
 
         public static int [] data(string s)
         {
-            int min_r = -1, max_r = -1;
             int at = 0, gc = 0;
             if (s.Length == 0)
             {
-                return new int[] { 0, 0, 0, 0 };
-            }
-            if (min_r == -1 || max_r == -1)
-            {
-                min_r = s[0];
-                max_r = s[0];
+                return new int[] { 0, 0 };
             }
             for (int i = 0; i < s.Length; i++)
             {
                 char c = s[i];
-                if (c < min_r)
-                    min_r = c;
-                if (c > max_r)
-                    max_r = c;
-                if (c == 'A' || c == 'U')
+                if (c == 'A' || c == 'T')
                     at+=2;
                 if (c == 'G' || c == 'C')
                     gc+=2;
             }
-            return new int[] { min_r, max_r, at, gc };
+            return new int[] { at, gc };
         }
 
         public static int quat(int k)
@@ -106,7 +88,7 @@ namespace DNA
                 string nstr = "";
                 while (r > 0)
                 {
-                    nstr = ACGU(r % 4) + nstr;
+                    nstr = ACGT(r % 4) + nstr;
                     r /= 4;
                 }
                 if (mfst.Equals(""))
@@ -117,14 +99,14 @@ namespace DNA
             return mfst;
         }
 
-        public static char ACGU(int a)
+        public static char ACGT(int a)
         {
             switch (a)
             {
                 case 0: return 'A';
                 case 1: return 'C';
                 case 2: return 'G';
-                case 3: return 'U';
+                case 3: return 'T';
             }
             return (char)0;
         }

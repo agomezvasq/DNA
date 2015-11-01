@@ -59,37 +59,37 @@ namespace dnaK
             {
                 switch (value)
                 {
-                    case 0:
+                    case 'A':
                         bU.Source = Au;
                         bUk.Text = "A";
                         bD.Source = Td;
                         bDk.Text = "T";
                         break;
-                    case 1:
+                    case 'C':
                         bU.Source = Cu;
                         bUk.Text = "C";
                         bD.Source = Gd;
                         bDk.Text = "G";
                         break;
-                    case 2:
+                    case 'G':
                         bU.Source = Gu;
                         bUk.Text = "G";
                         bD.Source = Cd;
                         bDk.Text = "C";
                         break;
-                    case 3:
+                    case 'T':
                         bU.Source = Tu;
                         bUk.Text = "T";
                         bD.Source = Ad;
                         bDk.Text = "A";
                         break;
-                    case 4:
+                    case 'U':
                         bU.Source = Uu;
                         bUk.Text = "U";
                         bD.Source = Ad;
                         bDk.Text = "A";
                         break;
-                    case 5:
+                    case 'Ä':
                         bU.Source = Au;
                         bUk.Text = "A";
                         bD.Source = Ud;
