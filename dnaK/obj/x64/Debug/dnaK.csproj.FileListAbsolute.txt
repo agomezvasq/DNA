@@ -480,3 +480,8 @@ e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\StringItemM.g.i
 e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\StringItemM.g.cs
 e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\StringItemM.xaml
 e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\StringItemM.xbf
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Acid.xbf
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\Acid.g.i.cs
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\Acid.g.cs
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\Acid.xaml
+e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\Acid.xbf

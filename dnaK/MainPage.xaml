@@ -19,27 +19,24 @@
                     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Height="130" VerticalAlignment="Bottom" Background="#7FD4D4D4" Margin="0,0,0,-0.333">
                         <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
                             <local:BP Height="130"/>
-                            <local:BP Base="1" Height="130"/>
-                            <local:BP Base="2" Height="130"/>
-                            <local:BP Base="3" Height="130"/>
-                            <local:BP Height="130"/>
-                            <local:BP Base="2" Height="130"/>
                         </StackPanel>
                     </ScrollViewer>
-                    <AppBarButton x:Name="appBarButton" HorizontalAlignment="Right" Icon="OpenFile" Label="Import" Margin="0,32,78,0" VerticalAlignment="Top"/>
-                    <AppBarButton x:Name="appBarButton_Copy" HorizontalAlignment="Right" Icon="Admin" Label="Do" Margin="0,32,10,0" VerticalAlignment="Top"/>
-                    <Canvas Margin="0,0,10,130" HorizontalAlignment="Right" Width="336" VerticalAlignment="Center" Height="360">
-                        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="336" TextAlignment="Center"/>
-                        <TextBlock x:Name="GCs" TextWrapping="Wrap" Text="string: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="63"/>
-                        <TextBlock x:Name="textBlock_Copy1" TextWrapping="Wrap" Text="AT/GC" VerticalAlignment="Top" FontSize="48" Width="336" TextAlignment="Center" Canvas.Top="138"/>
-                        <TextBlock x:Name="ATs" TextWrapping="Wrap" Text="string: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="202"/>
-                        <TextBlock x:Name="bps" TextWrapping="Wrap" Text="STRING: 0 BP" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="296"/>
-                        <TextBlock x:Name="GCt" TextWrapping="Wrap" Text="total: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="95"/>
-                        <TextBlock x:Name="ATt" TextWrapping="Wrap" Text="total: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="234"/>
-                        <TextBlock x:Name="bpt" TextWrapping="Wrap" Text="TOTAL: 0 BP" VerticalAlignment="Top" FontSize="26.667" Width="336" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="328"/>
+                    <AppBarButton x:Name="appBarButton" HorizontalAlignment="Right" Icon="OpenFile" Label="Import" Margin="0,32,68,0" VerticalAlignment="Top"/>
+                    <AppBarButton x:Name="appBarButton_Copy" HorizontalAlignment="Right" Icon="Admin" Label="Do" Margin="0,32,0,0" VerticalAlignment="Top"/>
+                    <Canvas Margin="0,197,0,327.667" HorizontalAlignment="Right" Width="356" VerticalAlignment="Center" Height="360">
+                        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="%GC" VerticalAlignment="Top" FontSize="48" Width="356" TextAlignment="Center"/>
+                        <TextBlock x:Name="GCs" TextWrapping="Wrap" Text="string: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="356" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="63"/>
+                        <TextBlock x:Name="textBlock_Copy1" TextWrapping="Wrap" Text="AT/GC" VerticalAlignment="Top" FontSize="48" Width="356" TextAlignment="Center" Canvas.Top="138"/>
+                        <TextBlock x:Name="ATs" TextWrapping="Wrap" Text="string: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="356" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="202"/>
+                        <TextBlock x:Name="bps" TextWrapping="Wrap" Text="string: 0 BP" VerticalAlignment="Top" FontSize="26.667" Width="356" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="296"/>
+                        <TextBlock x:Name="GCt" TextWrapping="Wrap" Text="total: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="356" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="95"/>
+                        <TextBlock x:Name="ATt" TextWrapping="Wrap" Text="total: 0.0" VerticalAlignment="Top" FontSize="26.667" Width="356" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="234"/>
+                        <TextBlock x:Name="bpt" TextWrapping="Wrap" Text="total: 0 BP" VerticalAlignment="Top" FontSize="26.667" Width="356" TextAlignment="Center" FontFamily="Segoe UI Light" Canvas.Top="328"/>
                     </Canvas>
                     <ScrollViewer Margin="0,102,356,129.667">
-                        <StackPanel Background="#7FE2E2E2" BorderBrush="Black" BorderThickness="0" RenderTransformOrigin="-2.191,0.564"/>
+                        <StackPanel Background="#7FE2E2E2" BorderBrush="Black" BorderThickness="0" RenderTransformOrigin="-2.191,0.564">
+                            <local:Str/>
+                        </StackPanel>
                     </ScrollViewer>
                 </Grid>
             </PivotItem>
