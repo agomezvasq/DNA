@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using DNA;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -12,7 +14,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using DNA;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -36,42 +37,20 @@ namespace dnaK
 
         }
 
-        public int t_gcc;
-        public int t_ag;
+        public double t_gcc;
+        public double t_ag;
         public int tBP;
 
         private void t_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
             Sequence seq = new Sequence(t.Text);
             assemble(seq);
-            updt(seq);
+            view(seq);
         }
 
         private void t_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
-            Sequence seq = new Sequence(t.Text);
-
-            Str sI = new Str();
-            sI.Width = double.NaN;
-            sI.DNASequence = seq.getSeq();
-
-            if (stackPStrings.Children.Count == 0)
-            {
-                sI.Max = true;
-                stackPStrings.Children.Add(sI);
-            } else
-            {
-                foreach (Str sK in stackPStrings.Children)
-                    sK.Max = false;
-
-                int i = stackPStrings.Children.Count - 1;
-                while (i >= 0 && ((Str)stackPStrings.Children[i]).DNASequence.Length < sI.DNASequence.Length)
-                    i--;
-
-                stackPStrings.Children.Insert(i + 1, sI);
-                ((Str)stackPStrings.Children[0]).Max = true;
-            }
-            t.Text = "";
+            addSequence();
         }
 
         public void assemble(Sequence s)
@@ -87,16 +66,85 @@ namespace dnaK
             }
         }
 
-        public void updt(Sequence s)
+        public void view(Sequence s)
         {
+            String dna = s.getStr();
+            foreach (Str sI in stackPStrings.Children)
+                dna = dna + sI.getSequence().getStr();
+            Sequence sT = new Sequence(dna);
+
             GCs.Text = "string: " + s.getGC_C() + "%";
-            GCt.Text = "total: " + (t_gcc + s.getGC_C()) + "%";
-
             AGs.Text = "string: " + s.getATGC_R();
-            AGt.Text = "total: " + (t_ag + s.getATGC_R());
-
             bps.Text = "string: " + s.bp() + "BP";
-            bpt.Text = "total: " + (tBP + s.bp()) + "BP";
+
+            GCt.Text = "total: " + sT.getGC_C() + "%";
+            AGt.Text = "total: " + sT.getATGC_R();
+            bpt.Text = "total: " + sT.bp() + "BP";
+        }
+
+        public void write()
+        {
+            String dna = "";
+            foreach (Str sI in stackPStrings.Children)
+                dna = dna + sI.getSequence().getStr();
+            Sequence sT = new Sequence(dna);
+
+            t_gcc = sT.getGC_C();
+            t_ag = sT.getATGC_R();
+            tBP = sT.bp();
+
+            GCt.Text = "total: " + t_gcc + "%";
+            AGt.Text = "total: " + t_ag;
+            bpt.Text = "total: " + tBP + "BP";
+        }
+
+        public void addSequence()
+        {
+            Sequence seq = new Sequence(t.Text);
+
+            Str sI = new Str(seq);
+            sI.Width = double.NaN;
+
+            if (stackPStrings.Children.Count == 0)
+            {
+                sI.Max = true;
+                stackPStrings.Children.Add(sI);
+            }
+            else
+            {
+                foreach (Str sK in stackPStrings.Children)
+                    sK.Max = false;
+
+                int i = stackPStrings.Children.Count - 1;
+                while (i >= 0 && ((Str)stackPStrings.Children[i]).getSequence().getSeq().Length < sI.getSequence().getSeq().Length)
+                    i--;
+
+                stackPStrings.Children.Insert(i + 1, sI);
+                ((Str)stackPStrings.Children[0]).Max = true;
+            }
+
+            t.Text = "";
+            write();
+            match(sI, stackPStrings.Children.IndexOf(sI));
+        }
+
+        public void match(Str sI, int id)
+        {
+            Canvas c = new Canvas();
+            c.Width = double.NaN;
+            c.Height = 130d;
+            if (sI.Max)
+                c.Background = new SolidColorBrush(Color.FromArgb(127, 251, 206, 180));
+            else
+                c.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
+
+            StringItemM sM = new StringItemM(sI.getSequence(), c);
+            if (sI.Max)
+            {
+                sM.Max = true;
+                sM.Show = true;
+            }
+            stackSequences.Children.Add(sM);
         }
     }
 }

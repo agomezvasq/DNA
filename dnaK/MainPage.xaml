@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="White">
-        <Pivot Title="">
+        <Pivot x:Name="pivot" Title="" SelectionChanged="Pivot_SelectionChanged" SelectedIndex="1">
             <PivotItem Header="Input" Margin="0,0,0,-0.333">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -37,8 +37,8 @@
             </PivotItem>
             <PivotItem Header="Match" Margin="0,0,0,-0.333">
                 <Grid>
-                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="{x:Null}" Margin="0,0,0,35">
-                        <StackPanel Height="850" Width="1440">
+                    <ScrollViewer x:Name="scrollSequences" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="{x:Null}" Margin="0,0,0,35">
+                        <StackPanel x:Name="matchDNA" Height="850" Width="1440">
                             <StackPanel Height="20" VerticalAlignment="Top" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                             <Canvas Height="130" Background="#7FFBCEB4" Margin="0,0,0.333,0">
                                 <StackPanel HorizontalAlignment="Left" Height="130" VerticalAlignment="Center" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled">
@@ -53,7 +53,7 @@
                         </StackPanel>
                     </ScrollViewer>
                     <ScrollViewer Height="35" VerticalAlignment="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#7FEAEAEA">
-                        <StackPanel x:Name="StackSequences" Height="25" VerticalAlignment="Top" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Left"/>
+                        <StackPanel x:Name="stackSequences" Height="25" VerticalAlignment="Top" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Left"/>
                     </ScrollViewer>
                 </Grid>
             </PivotItem>
@@ -145,7 +145,7 @@
                 </Grid>
             </PivotItem>
         </Pivot>
-        <AutoSuggestBox HorizontalAlignment="Right" Margin="0,10,141,0" VerticalAlignment="Top" Width="400" QueryIcon="Zoom" PlaceholderText="Search" IsSuggestionListOpen="True"/>
+        <AutoSuggestBox x:Name="search" HorizontalAlignment="Right" Margin="0,10,141,0" VerticalAlignment="Top" Width="400" QueryIcon="Zoom" PlaceholderText="Search" IsSuggestionListOpen="True"/>
         <AppBarButton x:Name="appBarButton2" HorizontalAlignment="Right" Icon="Download" Label="Save" Margin="0,-4,68,0" VerticalAlignment="Top"/>
         <AppBarToggleButton x:Name="appBarToggleButton" HorizontalAlignment="Right" Icon="View" Label="Aminoacids" Margin="0,-4,0,0" VerticalAlignment="Top" Checked="appBarToggleButton_Checked"/>
 

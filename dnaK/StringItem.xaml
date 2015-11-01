@@ -8,9 +8,9 @@
     mc:Ignorable="d" Height="25.249" Width="1084" Margin="0,0,0,4" VerticalAlignment="Top">
 
     <Grid x:Name="g" Margin="0,0,0,0.333" Background="White">
-        <TextBlock x:Name="text" Margin="2,2,94,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20"/>
-        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Right" Icon="Cancel" Label="appbarbutton" Margin="0,-12,-1,-2" VerticalAlignment="Top" IsCompact="True" Width="30" Click="appBarButton_Click"/>
-        <TextBlock x:Name="l" Margin="0,2,34,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="60" TextAlignment="Right"/>
+        <TextBlock x:Name="text" Margin="2,2,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20"/>
+        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Right" Icon="Cancel" Label="appbarbutton" Margin="0,-12,-1,-2" VerticalAlignment="Top" IsCompact="True" Width="30" Click="appBarButton_Click" Visibility="Collapsed"/>
+        <TextBlock x:Name="l" Margin="0,2,10,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="60" TextAlignment="Right"/>
 
     </Grid>
 </UserControl>

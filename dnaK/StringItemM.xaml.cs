@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using DNA;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -20,29 +21,21 @@ namespace dnaK
 {
     public sealed partial class StringItemM : UserControl
     {
-        public StringItemM()
+        private Sequence s;
+        private Canvas c;
+
+        public StringItemM(Sequence s, Canvas c)
         {
             this.InitializeComponent();
+
+            this.s = s;
+            this.text.Text = s.getSeq();
+            this.l.Text = s.getSeq().Length.ToString();
+
+            this.c = c;
         }
 
         private bool blue;
-
-        public string DNASequence
-        {
-            get
-            {
-                return text.Text;
-            }
-            set
-            {
-                if (value.Length <= 9)
-                    text.FontSize = 11.25d;
-                else
-                    text.FontSize = 5.6d;
-                text.Text = value;
-                l.Text = value.Length.ToString();
-            }
-        }
 
         public bool Max
         {
@@ -64,5 +57,32 @@ namespace dnaK
                 blue = value;
             }
         }
+
+        public bool Show
+        {
+            get
+            {
+                return sw.IsOn;
+            }
+            set
+            {
+                c.Visibility = Visibility.Visible;
+                sw.IsOn = value;
+            }
+        }
+
+        public string PMatch
+        {
+            get
+            {
+                return pr.Text;
+            }
+            set
+            {
+                pr.Text = value;
+            }
+        }
+
+        public Sequence getSequence() { return this.s; }
     }
 }

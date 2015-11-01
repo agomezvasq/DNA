@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using DNA;
 using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -20,25 +21,18 @@ namespace dnaK
 {
     public sealed partial class Str : UserControl
     {
-        public Str()
+        private Sequence s;
+
+        public Str(Sequence s)
         {
             this.InitializeComponent();
+
+            this.s = s;
+            this.text.Text = this.s.getSeq();
+            this.l.Text = this.s.getSeq().Length.ToString();
         }
 
         private bool blue;
-
-        public string DNASequence
-        {
-            get
-            {
-                return text.Text;
-            }
-            set
-            {
-                l.Text = value.Length.ToString();
-                text.Text = value;
-            }
-        }
 
         public bool Max
         {
@@ -71,5 +65,7 @@ namespace dnaK
             }
             ((StackPanel)this.Parent).Children.Remove(this);
         }
+
+        public Sequence getSequence() { return this.s; }
     }
 }
