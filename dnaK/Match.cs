@@ -57,5 +57,9 @@ namespace DNA
             }
             return sA;
         }
+
+        public Sequence getM() { return this.m; }
+        public Sequence getN() { return this.n; }
+        public Sequence [] getRes() { return this.mR; }
     }
 }

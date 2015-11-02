@@ -192,7 +192,6 @@ namespace dnaK.dnaK_XamlTypeInfo
         private object Activate_0_Acid() { return new global::dnaK.Acid(); }
         private object Activate_3_BP() { return new global::dnaK.BP(); }
         private object Activate_5_MainPage() { return new global::dnaK.MainPage(); }
-        private object Activate_9_StringItemM() { return new global::dnaK.StringItemM(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -256,9 +255,9 @@ namespace dnaK.dnaK_XamlTypeInfo
 
             case 9:   //  dnaK.StringItemM
                 userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_9_StringItemM;
-                userType.AddMemberName("DNASequence");
                 userType.AddMemberName("Max");
+                userType.AddMemberName("Show");
+                userType.AddMemberName("PMatch");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -297,25 +296,35 @@ namespace dnaK.dnaK_XamlTypeInfo
             var that = (global::dnaK.Str)instance;
             that.Max = (global::System.Boolean)Value;
         }
-        private object get_3_StringItemM_DNASequence(object instance)
-        {
-            var that = (global::dnaK.StringItemM)instance;
-            return that.DNASequence;
-        }
-        private void set_3_StringItemM_DNASequence(object instance, object Value)
-        {
-            var that = (global::dnaK.StringItemM)instance;
-            that.DNASequence = (global::System.String)Value;
-        }
-        private object get_4_StringItemM_Max(object instance)
+        private object get_3_StringItemM_Max(object instance)
         {
             var that = (global::dnaK.StringItemM)instance;
             return that.Max;
         }
-        private void set_4_StringItemM_Max(object instance, object Value)
+        private void set_3_StringItemM_Max(object instance, object Value)
         {
             var that = (global::dnaK.StringItemM)instance;
             that.Max = (global::System.Boolean)Value;
+        }
+        private object get_4_StringItemM_Show(object instance)
+        {
+            var that = (global::dnaK.StringItemM)instance;
+            return that.Show;
+        }
+        private void set_4_StringItemM_Show(object instance, object Value)
+        {
+            var that = (global::dnaK.StringItemM)instance;
+            that.Show = (global::System.Boolean)Value;
+        }
+        private object get_5_StringItemM_PMatch(object instance)
+        {
+            var that = (global::dnaK.StringItemM)instance;
+            return that.PMatch;
+        }
+        private void set_5_StringItemM_PMatch(object instance, object Value)
+        {
+            var that = (global::dnaK.StringItemM)instance;
+            that.PMatch = (global::System.String)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -343,17 +352,23 @@ namespace dnaK.dnaK_XamlTypeInfo
                 xamlMember.Getter = get_2_Str_Max;
                 xamlMember.Setter = set_2_Str_Max;
                 break;
-            case "dnaK.StringItemM.DNASequence":
-                userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.StringItemM");
-                xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "DNASequence", "String");
-                xamlMember.Getter = get_3_StringItemM_DNASequence;
-                xamlMember.Setter = set_3_StringItemM_DNASequence;
-                break;
             case "dnaK.StringItemM.Max":
                 userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.StringItemM");
                 xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "Max", "Boolean");
-                xamlMember.Getter = get_4_StringItemM_Max;
-                xamlMember.Setter = set_4_StringItemM_Max;
+                xamlMember.Getter = get_3_StringItemM_Max;
+                xamlMember.Setter = set_3_StringItemM_Max;
+                break;
+            case "dnaK.StringItemM.Show":
+                userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.StringItemM");
+                xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "Show", "Boolean");
+                xamlMember.Getter = get_4_StringItemM_Show;
+                xamlMember.Setter = set_4_StringItemM_Show;
+                break;
+            case "dnaK.StringItemM.PMatch":
+                userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.StringItemM");
+                xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "PMatch", "String");
+                xamlMember.Getter = get_5_StringItemM_PMatch;
+                xamlMember.Setter = set_5_StringItemM_PMatch;
                 break;
             }
             return xamlMember;

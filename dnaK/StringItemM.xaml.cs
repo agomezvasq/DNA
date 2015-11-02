@@ -23,7 +23,6 @@ namespace dnaK
     {
         private Sequence s;
         private StackPanel st;
-        private List<Canvas> c;
 
         public StringItemM(Sequence s, StackPanel st)
         {
@@ -68,11 +67,9 @@ namespace dnaK
             set
             {
                 if (value)
-                    foreach (Canvas cT in c)
-                        cT.Visibility = Visibility.Visible;
+                    st.Visibility = Visibility.Visible;
                 else
-                    foreach (Canvas cT in c)
-                        cT.Visibility = Visibility.Collapsed;
+                    st.Visibility = Visibility.Collapsed;
                 sw.IsOn = value;
             }
         }

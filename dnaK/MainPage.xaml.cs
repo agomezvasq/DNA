@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Shapes;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -55,12 +56,7 @@ namespace dnaK
             Str sI = new Str(seq);
             sI.Width = double.NaN;
 
-            if (stackPStrings.Children.Count == 0)
-            {
-                sI.Max = true;
-                stackPStrings.Children.Add(sI);
-            }
-            else
+            if (stackPStrings.Children.Count > 0)
             {
                 foreach (Str sK in stackPStrings.Children)
                     sK.Max = false;
@@ -71,6 +67,11 @@ namespace dnaK
 
                 stackPStrings.Children.Insert(i + 1, sI);
                 ((Str)stackPStrings.Children[0]).Max = true;
+            }
+            else
+            {
+                sI.Max = true;
+                stackPStrings.Children.Add(sI);
             }
 
             t.Text = "";
@@ -125,41 +126,73 @@ namespace dnaK
 
         public void match(Str sI, int id)
         {
+            if (sI.Max)
+            {
+                maxStack.Children.Clear();
+                StackPanel sP = cStack(sI.getSequence(), 0);
+                maxStack.Children.Add(sP);
+
+                StringItemM sM = new StringItemM(sI.getSequence(), maxStack);
+                sM.Max = true;
+
+                stackSequences.Children.Add(sM);
+            }
+            else
+            {
+                StackPanel st = new StackPanel();
+                st.Width = 1440d;
+                st.Height = 130d;
+                st.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
+
+                Match m = new Match(((Str)stackPStrings.Children[0]).getSequence(), sI.getSequence());
+                Sequence[] mR = m.getRes();
+
+                int pi = 0;
+                for (int i=0; i<mR.Length; i++)
+                {
+                    if (mR[i] != null)
+                    {
+                        StackPanel sP = cStack(mR[i], i - pi);
+                        st.Children.Add(sP);
+                        pi = i;
+                    }
+                }
+
+                if (st.Children.Count == 0)
+                    st.Children.Add(cStack(sI.getSequence(), 0));
+
+                matchDNA.Children.Insert(id, st);
+
+                StringItemM sM = new StringItemM(sI.getSequence(), st);
+
+                stackSequences.Children.Add(sM);
+            }
+        }
+
+        public StackPanel cStack(Sequence s, int loc)
+        {
             StackPanel sP = new StackPanel();
+
+            Rectangle r = new Rectangle();
+            r.Width = loc * 60;
+            r.Height = 130d;
+            sP.Children.Add(r);
+
             sP.Width = double.NaN;
             sP.Height = 130d;
             sP.Orientation = Orientation.Horizontal;
 
-            StringItemM sM = new StringItemM(sI.getSequence(), sP);
+            string e = s.getSeq();
 
-            for (int i=0; i<sI.getSequence().getSeq().Length; i++)
+            for (int j = 0; j < e.Length; j++)
             {
                 BP bp = new BP();
-                bp.Base = sI.getSequence().getSeq()[i];
+                bp.Base = e[j];
 
                 sP.Children.Add(bp);
             }
 
-            if (sI.Max)
-            {
-                sM.Max = true;
-
-                maxStack.Children.Clear();
-                maxStack.Children.Add(sP);
-            }
-            else
-            {
-                Canvas c = new Canvas();
-                c.Width = 1440d;
-                c.Height = 130d;
-                c.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
-                c.Visibility = Visibility.Collapsed;
-
-                c.Children.Add(sP);
-                matchDNA.Children.Insert(id, c);
-            }
-
-            stackSequences.Children.Add(sM);
+            return sP;
         }
     }
 }
