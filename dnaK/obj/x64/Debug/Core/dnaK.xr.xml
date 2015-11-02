@@ -146,6 +146,8 @@
       <RootProperty Name="MinWidth" />
       <RootProperty Name="Width" />
       <RootProperty Name="UseSystemFocusVisuals" />
+      <RootProperty Name="IsOn" />
+      <RootEvent Name="Toggled" />
     </RootType>
     <RootType FullName="dnaK.StringItemM" />
   </Roots.RootTypes>

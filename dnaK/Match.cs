@@ -14,7 +14,7 @@ namespace DNA
         {
             this.mR = match(m, n);
         }
-
+        
         public static string [] match(string m, string n)
         {
             string[] mA = new string[m.Length - 1];

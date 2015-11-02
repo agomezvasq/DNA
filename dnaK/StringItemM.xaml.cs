@@ -22,17 +22,17 @@ namespace dnaK
     public sealed partial class StringItemM : UserControl
     {
         private Sequence s;
-        private StackPanel st;
+        private List<StackPanel> st;
 
-        public StringItemM(Sequence s, StackPanel st)
+        public StringItemM(Sequence s, List<StackPanel> st)
         {
+            this.st = st;
+
             this.InitializeComponent();
 
             this.s = s;
             this.text.Text = s.getSeq();
             this.l.Text = s.getSeq().Length.ToString();
-
-            this.st = st;
         }
 
         private bool blue;
@@ -58,22 +58,6 @@ namespace dnaK
             }
         }
 
-        public bool Show
-        {
-            get
-            {
-                return sw.IsOn;
-            }
-            set
-            {
-                if (value)
-                    st.Visibility = Visibility.Visible;
-                else
-                    st.Visibility = Visibility.Collapsed;
-                sw.IsOn = value;
-            }
-        }
-
         public string PMatch
         {
             get
@@ -87,5 +71,15 @@ namespace dnaK
         }
 
         public Sequence getSequence() { return this.s; }
+
+        private void sw_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (sw.IsOn)
+                foreach (StackPanel sP in st)
+                    sP.Visibility = Visibility.Visible;
+            else
+                foreach (StackPanel sP in st)
+                    sP.Visibility = Visibility.Collapsed;
+        }
     }
 }

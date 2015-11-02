@@ -126,56 +126,49 @@ namespace dnaK
 
         public void match(Str sI, int id)
         {
-            if (stackSequences.Children.Count > 0)
-                ((StringItemM)stackSequences.Children[0]).Max = false;
+            List<StackPanel> st = new List<StackPanel>();
 
             if (sI.Max)
             {
                 maxStack.Children.Clear();
                 StackPanel sP = cStack(sI.getSequence().getSeq(), 0);
+                st.Add(sP);
                 maxStack.Children.Add(sP);
-
-                StringItemM sM = new StringItemM(sI.getSequence(), maxStack);
-                sM.Max = true;
-
-                stackSequences.Children.Add(sM);
             }
             else
             {
-                StackPanel st = new StackPanel();
-                st.Width = double.NaN;
-                st.Height = 130d;
-                st.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
-
                 Match m = new Match(((Str)stackPStrings.Children[0]).getSequence().getSeq(), sI.getSequence().getSeq());
                 string[] mR = m.getRes();
-
-                int pi = 0;
+                
                 for (int i=0; i<mR.Length; i++)
                 {
                     if (mR[i] != null)
                     {
                         search.Text = mR[i] + ",";
-                        StackPanel sP = cStack(mR[i], i - pi);
-                        st.Children.Add(sP);
-                        pi = i;
+                        StackPanel sP = cStack(mR[i], i);
+                        st.Add(sP);
+                        matchDNA.Children.Insert(id, sP);
                     }
                 }
 
-                if (st.Children.Count == 0)
-                    st.Children.Add(cStack(sI.getSequence().getSeq(), 0));
-
-                matchDNA.Children.Insert(id, st);
-
-                StringItemM sM = new StringItemM(sI.getSequence(), st);
-
-                stackSequences.Children.Add(sM);
+                if (st.Count == 0)
+                {
+                    StackPanel k = cStack(sI.getSequence().getSeq(), 0);
+                    maxStack.Children.Add(cStack(sI.getSequence().getSeq(), 0)); 
+                }
             }
+
+            StringItemM sM = new StringItemM(sI.getSequence(), st);
+            if (sI.Max)
+                sM.Max = true;
+            sM.Margin = new Thickness(0d, 0d, 2d, 0d);
+
+            stackSequences.Children.Add(sM);
         }
 
         public StackPanel cStack(string e, int loc)
         {
-            StackPanel sP = new StackPanel();
+            StackPanel sP = new StackPanel();;
 
             Rectangle r = new Rectangle();
             r.Width = loc * 60;
