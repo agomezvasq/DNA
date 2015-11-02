@@ -51,10 +51,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Source" />
     </RootType>
-    <RootType FullName="dnaK.BP">
-      <RootProperty Name="Height" />
-      <RootProperty Name="Base" />
-    </RootType>
+    <RootType FullName="dnaK.BP" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Content" />
     </RootType>
@@ -74,18 +71,6 @@
       <RootProperty Name="Visibility" />
       <RootEvent Name="TextChanged" />
       <RootEvent Name="QuerySubmitted" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Icon" />
-      <RootProperty Name="Label" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="IsCompact" />
-      <RootProperty Name="Visibility" />
-      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Header" />
@@ -108,29 +93,20 @@
       <RootProperty Name="HorizontalScrollBarVisibility" />
       <RootProperty Name="VerticalScrollBarVisibility" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Content" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
       <RootMethod Name="GetHorizontalScrollBarVisibility" />
       <RootMethod Name="SetHorizontalScrollBarVisibility" />
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="IsReadOnly" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="BorderBrush" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Orientation" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Children" />
       <RootProperty Name="Background" />
       <RootProperty Name="BorderBrush" />
@@ -139,6 +115,17 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="IsCompact" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Visibility" />
+      <RootEvent Name="Click" />
+    </RootType>
     <RootType FullName="dnaK.MainPage" />
     <RootType FullName="dnaK.Str" />
     <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">

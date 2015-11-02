@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>bdff8d54-b039-4ebb-8620-efa9ea4810de</PackageIdentityName>
     <IntermediateOutputPath>e:\documents\visual studio 2015\Projects\dnaK\dnaK\obj\x64\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>51061FE95D0DE2413081FEBDA65F9B4D86E1BA6EAA65C242B27D83A1CAFEF83F</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>97E6760B1309B608E9FD03DE33FC057289ECA76F6B9C6A763366AFE3379FE769</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>bdff8d54-b039-4ebb-8620-efa9ea4810de_1.0.0.0_x64__9stanhzq9djyr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>bdff8d54-b039-4ebb-8620-efa9ea4810de_9stanhzq9djyr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>bdff8d54-b039-4ebb-8620-efa9ea4810de</RegisteredPackageID>
@@ -22,7 +22,7 @@
     <AppXManifest Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-02T21:51:06.922</Modified>
+      <Modified>2015-11-02T22:36:31.151</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -82,13 +82,37 @@
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-06-05T03:32:06.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <Modified>2015-06-05T03:32:06.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <Modified>2015-06-05T03:32:06.000</Modified>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
@@ -101,6 +125,26 @@
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <Modified>2015-06-05T03:32:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <Modified>2015-10-30T22:34:42.250</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
@@ -122,17 +166,17 @@
       <PackagePath>Cu.png</PackagePath>
       <Modified>2015-10-30T16:57:49.412</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\dnaK.exe">
-      <PackagePath>dnaK.exe</PackagePath>
-      <Modified>2015-11-02T21:51:06.917</Modified>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\DNAK.exe">
+      <PackagePath>DNAK.exe</PackagePath>
+      <Modified>2015-11-02T22:36:31.147</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\dnaK.xr.xml">
       <PackagePath>dnaK.xr.xml</PackagePath>
-      <Modified>2015-11-02T20:58:13.899</Modified>
+      <Modified>2015-11-02T22:36:27.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\entrypoint\dnaK.exe">
       <PackagePath>entrypoint\dnaK.exe</PackagePath>
-      <Modified>2015-11-02T21:50:11.892</Modified>
+      <Modified>2015-11-02T22:36:28.266</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Gd.png">
       <PackagePath>Gd.png</PackagePath>
@@ -172,7 +216,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-02T21:03:25.771</Modified>
+      <Modified>2015-11-02T22:36:29.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

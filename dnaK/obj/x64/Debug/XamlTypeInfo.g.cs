@@ -13,7 +13,7 @@ namespace dnaK
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-    private global::dnaK.dnaK_XamlTypeInfo.XamlTypeInfoProvider _provider;
+    private global::DNAK.dnaK_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
         /// <summary>
         /// GetXamlType(Type)
@@ -22,7 +22,7 @@ namespace dnaK
         {
             if(_provider == null)
             {
-                _provider = new global::dnaK.dnaK_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::DNAK.dnaK_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByType(type);
         }
@@ -34,7 +34,7 @@ namespace dnaK
         {
             if(_provider == null)
             {
-                _provider = new global::dnaK.dnaK_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::DNAK.dnaK_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByName(fullName);
         }
@@ -49,7 +49,7 @@ namespace dnaK
     }
 }
 
-namespace dnaK.dnaK_XamlTypeInfo
+namespace DNAK.dnaK_XamlTypeInfo
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -195,8 +195,8 @@ namespace dnaK.dnaK_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::dnaK.dnaK_XamlTypeInfo.XamlUserType userType;
+            global::DNAK.dnaK_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::DNAK.dnaK_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
@@ -204,7 +204,7 @@ namespace dnaK.dnaK_XamlTypeInfo
             {
 
             case 0:   //  dnaK.Acid
-                userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType = new global::DNAK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_0_Acid;
                 userType.AddMemberName("AminoAcid");
                 userType.SetIsLocalType();
@@ -212,15 +212,15 @@ namespace dnaK.dnaK_XamlTypeInfo
                 break;
 
             case 1:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::DNAK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 2:   //  String
-                xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::DNAK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 3:   //  dnaK.BP
-                userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType = new global::DNAK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_3_BP;
                 userType.AddMemberName("Base");
                 userType.SetIsLocalType();
@@ -228,33 +228,33 @@ namespace dnaK.dnaK_XamlTypeInfo
                 break;
 
             case 4:   //  Int32
-                xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::DNAK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 5:   //  dnaK.MainPage
-                userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::DNAK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_5_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 6:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::DNAK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 7:   //  dnaK.Str
-                userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType = new global::DNAK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.AddMemberName("Max");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 8:   //  Boolean
-                xamlType = new global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::DNAK.dnaK_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 9:   //  dnaK.StringItemM
-                userType = new global::dnaK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType = new global::DNAK.dnaK_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.AddMemberName("Max");
                 userType.AddMemberName("PMatch");
                 userType.SetIsLocalType();
@@ -318,38 +318,38 @@ namespace dnaK.dnaK_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::dnaK.dnaK_XamlTypeInfo.XamlMember xamlMember = null;
-            global::dnaK.dnaK_XamlTypeInfo.XamlUserType userType;
+            global::DNAK.dnaK_XamlTypeInfo.XamlMember xamlMember = null;
+            global::DNAK.dnaK_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
             case "dnaK.Acid.AminoAcid":
-                userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.Acid");
-                xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "AminoAcid", "String");
+                userType = (global::DNAK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.Acid");
+                xamlMember = new global::DNAK.dnaK_XamlTypeInfo.XamlMember(this, "AminoAcid", "String");
                 xamlMember.Getter = get_0_Acid_AminoAcid;
                 xamlMember.Setter = set_0_Acid_AminoAcid;
                 break;
             case "dnaK.BP.Base":
-                userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.BP");
-                xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "Base", "Int32");
+                userType = (global::DNAK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.BP");
+                xamlMember = new global::DNAK.dnaK_XamlTypeInfo.XamlMember(this, "Base", "Int32");
                 xamlMember.Getter = get_1_BP_Base;
                 xamlMember.Setter = set_1_BP_Base;
                 break;
             case "dnaK.Str.Max":
-                userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.Str");
-                xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "Max", "Boolean");
+                userType = (global::DNAK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.Str");
+                xamlMember = new global::DNAK.dnaK_XamlTypeInfo.XamlMember(this, "Max", "Boolean");
                 xamlMember.Getter = get_2_Str_Max;
                 xamlMember.Setter = set_2_Str_Max;
                 break;
             case "dnaK.StringItemM.Max":
-                userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.StringItemM");
-                xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "Max", "Boolean");
+                userType = (global::DNAK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.StringItemM");
+                xamlMember = new global::DNAK.dnaK_XamlTypeInfo.XamlMember(this, "Max", "Boolean");
                 xamlMember.Getter = get_3_StringItemM_Max;
                 xamlMember.Setter = set_3_StringItemM_Max;
                 break;
             case "dnaK.StringItemM.PMatch":
-                userType = (global::dnaK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.StringItemM");
-                xamlMember = new global::dnaK.dnaK_XamlTypeInfo.XamlMember(this, "PMatch", "String");
+                userType = (global::DNAK.dnaK_XamlTypeInfo.XamlUserType)GetXamlTypeByName("dnaK.StringItemM");
+                xamlMember = new global::DNAK.dnaK_XamlTypeInfo.XamlMember(this, "PMatch", "String");
                 xamlMember.Getter = get_4_StringItemM_PMatch;
                 xamlMember.Setter = set_4_StringItemM_PMatch;
                 break;
@@ -407,9 +407,9 @@ namespace dnaK.dnaK_XamlTypeInfo
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : global::dnaK.dnaK_XamlTypeInfo.XamlSystemBaseType
+    internal class XamlUserType : global::DNAK.dnaK_XamlTypeInfo.XamlSystemBaseType
     {
-        global::dnaK.dnaK_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::DNAK.dnaK_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Windows.UI.Xaml.Markup.IXamlType _baseType;
         bool _isArray;
         bool _isMarkupExtension;
@@ -423,7 +423,7 @@ namespace dnaK.dnaK_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::dnaK.dnaK_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
+        public XamlUserType(global::DNAK.dnaK_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -615,7 +615,7 @@ namespace dnaK.dnaK_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {
-        global::dnaK.dnaK_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::DNAK.dnaK_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -624,7 +624,7 @@ namespace dnaK.dnaK_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::dnaK.dnaK_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::DNAK.dnaK_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;

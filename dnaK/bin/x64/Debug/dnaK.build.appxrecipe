@@ -60,11 +60,35 @@
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
@@ -74,6 +98,21 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
@@ -90,8 +129,8 @@
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\Cu.png">
       <PackagePath>Cu.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\dnaK.exe">
-      <PackagePath>dnaK.exe</PackagePath>
+    <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\DNAK.exe">
+      <PackagePath>DNAK.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\Core\dnaK.xr.xml">
       <PackagePath>dnaK.xr.xml</PackagePath>

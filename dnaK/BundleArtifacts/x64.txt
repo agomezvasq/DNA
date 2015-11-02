@@ -1,0 +1,1 @@
+MainPackage=e:\documents\visual studio 2015\Projects\dnaK\dnaK\bin\x64\Debug\dnaK_1.0.0.0_x64_Debug.appx

@@ -126,6 +126,9 @@ namespace dnaK
 
         public void match(Str sI, int id)
         {
+            foreach (StringItemM sMK in stackSequences.Children)
+                sMK.Max = false;
+
             List<StackPanel> st = new List<StackPanel>();
             double pr = 0;
 
@@ -155,29 +158,7 @@ namespace dnaK
                         matchDNA.Children.Insert(id, sP);
                     }
                 }
-
-                string nS = sI.getSequence().getSeq();
-                char[] pStr = new char[nS.Length];
-                for (int r = 0; r < nS.Length; r++)
-                    pStr[r] = nS[r];
-                /*
-                string [] data = mR[mR.Length - 1].Split(':');
-
-                for (int p=0; p<data.Length; p++)
-                {
-                    string[] info = data[p].Split('-');
-                    string nK = "";
-                    int n = Int32.Parse(data[0]);
-                    int l = Int32.Parse(data[1]);
-                    for (int q = 0; q < n; q++)
-                        nK = nK + nS[q];
-                    for (int r = n + l; r < nS.Length; r++)
-                        nK = nK + nS[r];
-                    nS = nK;
-                }
-
-                StackPanel sDat = cStack()
-                */
+                
                 pr = pr / sI.getSequence().getSeq().Length * 100;
 
                 if (st.Count == 0)
@@ -190,11 +171,18 @@ namespace dnaK
 
             StringItemM sM = new StringItemM(sI.getSequence(), st);
             sM.PMatch = Math.Round(pr) + "%";
-            if (sI.Max)
-                sM.Max = true;
             sM.Margin = new Thickness(0d, 0d, 4d, 0d);
 
-            stackSequences.Children.Add(sM);
+            if (sI.Max)
+            {
+                sM.Max = true;
+                stackSequences.Children.Add(sM);
+            }
+            else
+            {
+                stackSequences.Children.Insert(0, sM);
+            }
+            
         }
 
         public StackPanel cStack(string e, int loc)
