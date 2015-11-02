@@ -42,7 +42,7 @@
                             <StackPanel x:Name="maxStack" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Background="#7FFBCEB4"/>
                         </StackPanel>
                     </ScrollViewer>
-                    <ScrollViewer Height="35" VerticalAlignment="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#7FD2D2D2">
+                    <ScrollViewer Height="35" VerticalAlignment="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#7FD4D4D4">
                         <StackPanel x:Name="stackSequences" Height="25" VerticalAlignment="Top" Orientation="Horizontal" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" HorizontalAlignment="Left"/>
                     </ScrollViewer>
                 </Grid>
@@ -113,7 +113,7 @@
                 </Grid>
             </PivotItem>
         </Pivot>
-        <AutoSuggestBox x:Name="search" HorizontalAlignment="Right" Margin="0,10,68,0" VerticalAlignment="Top" Width="400" QueryIcon="Zoom" PlaceholderText="Search" IsSuggestionListOpen="True"/>
+        <AutoSuggestBox x:Name="search" HorizontalAlignment="Right" Margin="0,10,68,0" VerticalAlignment="Top" Width="400" QueryIcon="Zoom" PlaceholderText="Search" IsSuggestionListOpen="True" Visibility="Collapsed"/>
         <AppBarButton x:Name="appBarButton2" HorizontalAlignment="Right" Icon="Download" Label="Save" Margin="0,-4,0,0" VerticalAlignment="Top"/>
 
     </Grid>

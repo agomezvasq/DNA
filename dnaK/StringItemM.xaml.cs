@@ -49,10 +49,12 @@ namespace dnaK
                 {
                     g.Background = new SolidColorBrush(Color.FromArgb(255, 27, 161, 226));
                     g.RequestedTheme = ElementTheme.Dark;
+                    pr.Visibility = Visibility.Collapsed;
                 } else
                 {
                     g.Background = new SolidColorBrush(Colors.White);
                     g.RequestedTheme = ElementTheme.Default;
+                    pr.Visibility = Visibility.Visible;
                 }
                 blue = value;
             }
@@ -80,6 +82,16 @@ namespace dnaK
             else
                 foreach (StackPanel sP in st)
                     sP.Visibility = Visibility.Collapsed;
+        }
+
+        private void UserControl_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            text.Text = s.getStr();
+        }
+
+        private void UserControl_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            text.Text = s.getSeq();
         }
     }
 }

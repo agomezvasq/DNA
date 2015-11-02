@@ -127,10 +127,13 @@ namespace dnaK
         public void match(Str sI, int id)
         {
             List<StackPanel> st = new List<StackPanel>();
+            double pr = 0;
 
             if (sI.Max)
             {
                 maxStack.Children.Clear();
+
+                pr = 100;
                 StackPanel sP = cStack(sI.getSequence().getSeq(), 0);
                 st.Add(sP);
                 maxStack.Children.Add(sP);
@@ -139,29 +142,57 @@ namespace dnaK
             {
                 Match m = new Match(((Str)stackPStrings.Children[0]).getSequence().getSeq(), sI.getSequence().getSeq());
                 string[] mR = m.getRes();
-                
-                for (int i=0; i<mR.Length; i++)
+
+                for (int i=0; i<mR.Length-1; i++)
                 {
                     if (mR[i] != null)
                     {
                         search.Text = mR[i] + ",";
+                        pr += mR[i].Length;
                         StackPanel sP = cStack(mR[i], i);
+                        sP.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
                         st.Add(sP);
                         matchDNA.Children.Insert(id, sP);
                     }
                 }
 
+                string nS = sI.getSequence().getSeq();
+                char[] pStr = new char[nS.Length];
+                for (int r = 0; r < nS.Length; r++)
+                    pStr[r] = nS[r];
+                /*
+                string [] data = mR[mR.Length - 1].Split(':');
+
+                for (int p=0; p<data.Length; p++)
+                {
+                    string[] info = data[p].Split('-');
+                    string nK = "";
+                    int n = Int32.Parse(data[0]);
+                    int l = Int32.Parse(data[1]);
+                    for (int q = 0; q < n; q++)
+                        nK = nK + nS[q];
+                    for (int r = n + l; r < nS.Length; r++)
+                        nK = nK + nS[r];
+                    nS = nK;
+                }
+
+                StackPanel sDat = cStack()
+                */
+                pr = pr / sI.getSequence().getSeq().Length * 100;
+
                 if (st.Count == 0)
                 {
                     StackPanel k = cStack(sI.getSequence().getSeq(), 0);
+                    k.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
                     maxStack.Children.Add(cStack(sI.getSequence().getSeq(), 0)); 
                 }
             }
 
             StringItemM sM = new StringItemM(sI.getSequence(), st);
+            sM.PMatch = Math.Round(pr) + "%";
             if (sI.Max)
                 sM.Max = true;
-            sM.Margin = new Thickness(0d, 0d, 2d, 0d);
+            sM.Margin = new Thickness(0d, 0d, 4d, 0d);
 
             stackSequences.Children.Add(sM);
         }

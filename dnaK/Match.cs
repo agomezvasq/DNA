@@ -8,25 +8,34 @@ namespace DNA
 {
     class Match
     {
-        private string [] mR;
+        private string[] sA;
+        private int[] pN;
 
         public Match(string m, string n)
         {
-            this.mR = match(m, n);
+            pN = new int[m.Length-1];
+            sA = new string[m.Length];
+            match(m, n);
         }
         
-        public static string [] match(string m, string n)
+        public void match(string m, string n)
         {
             string[] mA = new string[m.Length - 1];
 
             for (int i = 0; i < n.Length - 1; i++)
+            {
                 for (int j = 0; j < m.Length - 1; j++)
+                {
                     if (n[i] == m[j] && n[i + 1] == m[j + 1])
+                    {
                         mA[j] = "" + n[i] + n[i + 1];
+                        pN[j] = i;
+                    }
+                }
+            }
 
             int max = 0;
 
-            string[] sA = new string[m.Length - 1];
             for (int k = 0; k < m.Length - 1; k++) 
             {
                 if (mA[k] != null)
@@ -44,12 +53,17 @@ namespace DNA
                         sA = new string[m.Length - 1];
                     }
                     if (l == max)
+                    {
                         sA[k] = str;
+                        if (sA[m.Length - 1] == null)
+                            sA[m.Length - 1] = "";
+                        sA[m.Length - 1] = sA[m.Length - 1] + k + "-" + pN[k] + "-" + str.Length + ":"; 
+                    }
                 }
             }
-            return sA;
         }
 
-        public string [] getRes() { return this.mR; }
+        public string [] getRes() { return this.sA; }
+        public int[] getPn() { return this.pN; }
     }
 }

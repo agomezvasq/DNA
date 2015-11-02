@@ -10,12 +10,16 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootEvent Name="PointerEntered" />
+      <RootEvent Name="PointerExited" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Margin" />
+      <RootEvent Name="PointerEntered" />
+      <RootEvent Name="PointerExited" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Margin" />
@@ -67,6 +71,7 @@
       <RootProperty Name="QueryIcon" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="IsSuggestionListOpen" />
+      <RootProperty Name="Visibility" />
       <RootEvent Name="TextChanged" />
       <RootEvent Name="QuerySubmitted" />
     </RootType>

@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300"
-    d:DesignWidth="400" Width="251" Height="25" Margin="0,0,2,0">
+    d:DesignWidth="400" Width="251" Height="25" Margin="0,0,2,0" PointerEntered="UserControl_PointerEntered" PointerExited="UserControl_PointerExited">
 
     <Grid x:Name="g" Background="White">
         <TextBlock x:Name="text" Margin="2,2,151,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="15" Height="20" SelectionHighlightColor="#FF6A00FF"/>

@@ -67,5 +67,15 @@ namespace dnaK
         }
 
         public Sequence getSequence() { return this.s; }
+
+        private void g_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            text.Text = s.getStr();
+        }
+
+        private void g_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            text.Text = s.getSeq();
+        }
     }
 }
