@@ -126,6 +126,9 @@ namespace dnaK
 
         public void match(Str sI, int id)
         {
+            if (stackSequences.Children.Count > 0)
+                ((StringItemM)stackSequences.Children[0]).Max = false;
+
             if (sI.Max)
             {
                 maxStack.Children.Clear();

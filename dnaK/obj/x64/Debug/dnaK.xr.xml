@@ -58,7 +58,6 @@
       <RootProperty Name="Title" />
       <RootProperty Name="SelectedIndex" />
       <RootProperty Name="Items" />
-      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
       <RootProperty Name="HorizontalAlignment" />
@@ -128,8 +127,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="RenderTransformOrigin" />
