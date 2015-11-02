@@ -8,23 +8,15 @@ namespace DNA
 {
     class Match
     {
-        private Sequence m;
-        private Sequence n;
-        private Sequence [] mR;
+        private string [] mR;
 
-        public Match(Sequence m, Sequence n)
+        public Match(string m, string n)
         {
-            this.m = m;
-            this.n = n;
-
             this.mR = match(m, n);
         }
 
-        public static Sequence [] match(Sequence a, Sequence b)
+        public static string [] match(string m, string n)
         {
-            string m = a.getSeq();
-            string n = b.getSeq();
-
             string[] mA = new string[m.Length - 1];
 
             for (int i = 0; i < n.Length - 1; i++)
@@ -34,7 +26,7 @@ namespace DNA
 
             int max = 0;
 
-            Sequence[] sA = new Sequence[m.Length - 1];
+            string[] sA = new string[m.Length - 1];
             for (int k = 0; k < m.Length - 1; k++) 
             {
                 if (mA[k] != null)
@@ -49,17 +41,15 @@ namespace DNA
                     if (l > max)
                     {
                         max = l;
-                        sA = new Sequence[m.Length - 1];
+                        sA = new string[m.Length - 1];
                     }
                     if (l == max)
-                        sA[k] = new Sequence(str);
+                        sA[k] = str;
                 }
             }
             return sA;
         }
 
-        public Sequence getM() { return this.m; }
-        public Sequence getN() { return this.n; }
-        public Sequence [] getRes() { return this.mR; }
+        public string [] getRes() { return this.mR; }
     }
 }

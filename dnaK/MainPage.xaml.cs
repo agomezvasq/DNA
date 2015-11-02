@@ -132,7 +132,7 @@ namespace dnaK
             if (sI.Max)
             {
                 maxStack.Children.Clear();
-                StackPanel sP = cStack(sI.getSequence(), 0);
+                StackPanel sP = cStack(sI.getSequence().getSeq(), 0);
                 maxStack.Children.Add(sP);
 
                 StringItemM sM = new StringItemM(sI.getSequence(), maxStack);
@@ -147,14 +147,15 @@ namespace dnaK
                 st.Height = 130d;
                 st.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
 
-                Match m = new Match(((Str)stackPStrings.Children[0]).getSequence(), sI.getSequence());
-                Sequence[] mR = m.getRes();
+                Match m = new Match(((Str)stackPStrings.Children[0]).getSequence().getSeq(), sI.getSequence().getSeq());
+                string[] mR = m.getRes();
 
                 int pi = 0;
                 for (int i=0; i<mR.Length; i++)
                 {
                     if (mR[i] != null)
                     {
+                        search.Text = mR[i] + ",";
                         StackPanel sP = cStack(mR[i], i - pi);
                         st.Children.Add(sP);
                         pi = i;
@@ -162,7 +163,7 @@ namespace dnaK
                 }
 
                 if (st.Children.Count == 0)
-                    st.Children.Add(cStack(sI.getSequence(), 0));
+                    st.Children.Add(cStack(sI.getSequence().getSeq(), 0));
 
                 matchDNA.Children.Insert(id, st);
 
@@ -172,7 +173,7 @@ namespace dnaK
             }
         }
 
-        public StackPanel cStack(Sequence s, int loc)
+        public StackPanel cStack(string e, int loc)
         {
             StackPanel sP = new StackPanel();
 
@@ -184,8 +185,6 @@ namespace dnaK
             sP.Width = double.NaN;
             sP.Height = 130d;
             sP.Orientation = Orientation.Horizontal;
-
-            string e = s.getSeq();
 
             for (int j = 0; j < e.Length; j++)
             {
