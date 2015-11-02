@@ -10,75 +10,52 @@ namespace DNA
     {
         private Sequence m;
         private Sequence n;
-        private int[] chars;
-        private List<Int32> mR;
+        private Sequence [] mR;
 
         public Match(Sequence m, Sequence n)
         {
             this.m = m;
             this.n = n;
 
-            chars = assign(n);
-            this.mR = match(m, n, chars);
-        }
-        
-        public static int[] assign(Sequence n)
-        {
-            string s = n.getSeq();
-            int[] chars = new int[256];
-            for (int j=0; j<256; j++)
-                chars[j] = s.Length;
-            for (int i=0; i<s.Length-1; i++)
-                chars[s[i]] = s.Length - i - 1;
-            return chars;
+            this.mR = match(m, n);
         }
 
-        public static List<Int32> match(Sequence a, Sequence b, int [] chars)
+        public static Sequence [] match(Sequence a, Sequence b)
         {
             string m = a.getSeq();
             string n = b.getSeq();
 
-            string[] ma = new string[m.Length - 1];
+            string[] mA = new string[m.Length - 1];
 
-            for (int i=0; i<n.Length-1; i++)
-                for (int j=0; j<m.Length-1; j++)
-                    if (n[i]==m[j] && n[i+1]==m[j+1])
-                        ma[j] = "" + n[i] + n[i + 1];
+            for (int i = 0; i < n.Length - 1; i++)
+                for (int j = 0; j < m.Length - 1; j++)
+                    if (n[i] == m[j] && n[i + 1] == m[j + 1])
+                        mA[j] = "" + n[i] + n[i + 1];
 
             int max = 0;
-            int iMax = -1;
-            for (int p=0; p<m.Length-1; p++)
-                if ()
-            
-            /*
-            int i = m.Length - 1;
-            while (i < n.Length)
+
+            Sequence[] sA = new Sequence[m.Length - 1];
+            for (int k = 0; k < m.Length - 1; k++) 
             {
-                int j = m.Length - 1;
-                //MessageBox.Show("n[i]: " + n[i] + "; m[j]: " + m[j]);
-                int tmp = i;
-                while (j >= 0 && n[i] == m[j])
+                if (mA[k] != null)
                 {
-                    //MessageBox.Show("n[i]: " + n[i] + "; m[j]: " + m[j]);
-                    j--;
-                    i--;
-                }
-                //MessageBox.Show("i: " + i + "; j: " + j);
-                i = tmp;
-                if (j < 0)
-                {
-                    ls.Add(i - m.Length + 1);
-                    i += m.Length;
-                }
-                else
-                {
-                    i += chars[n[i]];
-                    //if (i < n.Length) 
-                    //MessageBox.Show("ni: " + i + "; " + n[i] + ": " + chars[n[i]]);
+                    int l = 1;
+                    string str = "" + mA[k];
+                    while (k + l < m.Length - 1 && mA[k + l] != null)
+                    {
+                        str = str + (mA[k + l])[1];
+                        l++;
+                    }
+                    if (l > max)
+                    {
+                        max = l;
+                        sA = new Sequence[m.Length - 1];
+                    }
+                    if (l == max)
+                        sA[k] = new Sequence(str);
                 }
             }
-            return ls;
-            */
+            return sA;
         }
     }
 }

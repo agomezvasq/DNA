@@ -50,7 +50,32 @@ namespace dnaK
 
         private void t_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
-            addSequence();
+            Sequence seq = new Sequence(t.Text);
+
+            Str sI = new Str(seq);
+            sI.Width = double.NaN;
+
+            if (stackPStrings.Children.Count == 0)
+            {
+                sI.Max = true;
+                stackPStrings.Children.Add(sI);
+            }
+            else
+            {
+                foreach (Str sK in stackPStrings.Children)
+                    sK.Max = false;
+
+                int i = stackPStrings.Children.Count - 1;
+                while (i >= 0 && ((Str)stackPStrings.Children[i]).getSequence().getSeq().Length < sI.getSequence().getSeq().Length)
+                    i--;
+
+                stackPStrings.Children.Insert(i + 1, sI);
+                ((Str)stackPStrings.Children[0]).Max = true;
+            }
+
+            t.Text = "";
+            write();
+            match(sI, stackPStrings.Children.IndexOf(sI));
         }
 
         public void assemble(Sequence s)
@@ -96,36 +121,6 @@ namespace dnaK
             GCt.Text = "total: " + t_gcc + "%";
             AGt.Text = "total: " + t_ag;
             bpt.Text = "total: " + tBP + "BP";
-        }
-
-        public void addSequence()
-        {
-            Sequence seq = new Sequence(t.Text);
-
-            Str sI = new Str(seq);
-            sI.Width = double.NaN;
-
-            if (stackPStrings.Children.Count == 0)
-            {
-                sI.Max = true;
-                stackPStrings.Children.Add(sI);
-            }
-            else
-            {
-                foreach (Str sK in stackPStrings.Children)
-                    sK.Max = false;
-
-                int i = stackPStrings.Children.Count - 1;
-                while (i >= 0 && ((Str)stackPStrings.Children[i]).getSequence().getSeq().Length < sI.getSequence().getSeq().Length)
-                    i--;
-
-                stackPStrings.Children.Insert(i + 1, sI);
-                ((Str)stackPStrings.Children[0]).Max = true;
-            }
-
-            t.Text = "";
-            write();
-            match(sI, stackPStrings.Children.IndexOf(sI));
         }
 
         public void match(Str sI, int id)
