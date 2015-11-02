@@ -39,7 +39,7 @@
                 <Grid>
                     <ScrollViewer x:Name="scrollSequences" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Background="{x:Null}" Margin="0,0,0,35">
                         <StackPanel x:Name="matchDNA" Height="850">
-                            <StackPanel x:Name="maxStack" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Background="#7FFBCEB4" Width="1440"/>
+                            <StackPanel x:Name="maxStack" HorizontalAlignment="Left" Height="130" VerticalAlignment="Top" Background="#7FFBCEB4"/>
                         </StackPanel>
                     </ScrollViewer>
                     <ScrollViewer Height="35" VerticalAlignment="Bottom" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Background="#7FEAEAEA">

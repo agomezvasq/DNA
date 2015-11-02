@@ -128,7 +128,6 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Children" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Width" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="RenderTransformOrigin" />

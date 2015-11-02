@@ -143,7 +143,7 @@ namespace dnaK
             else
             {
                 StackPanel st = new StackPanel();
-                st.Width = 1440d;
+                st.Width = double.NaN;
                 st.Height = 130d;
                 st.Background = new SolidColorBrush(Color.FromArgb(127, 226, 226, 226));
 
