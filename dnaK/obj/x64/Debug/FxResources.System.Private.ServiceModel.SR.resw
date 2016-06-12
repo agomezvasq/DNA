@@ -4927,7 +4927,7 @@
     <value>An unsecured or incorrectly secured fault was received from the other party. See the inner FaultException for the fault code and detail.</value>
   </data>
   <data name="PeerLinkUtilityInvalidValues" xml:space="preserve">
-    <value>The LinkUtility message received from a neighbor has invalid values for usefull '{0}' and total '{1}'.</value>
+    <value>The LinkUtility message received from a neighbor has invalid values for useful '{0}' and total '{1}'.</value>
   </data>
   <data name="couldnTFindRequiredAttributeOfTypeOn2" xml:space="preserve">
     <value>Couldn't find required attribute of type {0} on {1}.</value>

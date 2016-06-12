@@ -16199,7 +16199,7 @@
 			</NamedResource>
 			<NamedResource name="PeerLinkUtilityInvalidValues" uri="ms-resource://bdff8d54-b039-4ebb-8620-efa9ea4810de/FxResources.System.Private.ServiceModel.SR/PeerLinkUtilityInvalidValues">
 				<Candidate type="String">
-					<Value>The LinkUtility message received from a neighbor has invalid values for usefull '{0}' and total '{1}'.</Value>
+					<Value>The LinkUtility message received from a neighbor has invalid values for useful '{0}' and total '{1}'.</Value>
 				</Candidate>
 			</NamedResource>
 			<NamedResource name="PeerListenIPAddressInvalid" uri="ms-resource://bdff8d54-b039-4ebb-8620-efa9ea4810de/FxResources.System.Private.ServiceModel.SR/PeerListenIPAddressInvalid">
